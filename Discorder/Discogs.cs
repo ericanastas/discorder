@@ -17,7 +17,7 @@ namespace Discorder
 
 
         public static string ApiKey = "7ccd6b4264";
-        
+
 
         public static Discorder.ReleaseDetails GetRelease(int releaseID)
         {
@@ -28,7 +28,13 @@ namespace Discorder
         //http://www.discogs.com/artist/Aphex+Twin?f=xml&api_key=<API_Key>  
         public static Discorder.ArtistDetails GetArtist(string artistName)
         {
-            //return single artist
+            UriBuilder builder = new UriBuilder();
+            builder.Host = "www.discogs.com";
+            builder.Path = @"artist/" + System.Uri.EscapeDataString(artistName);
+            builder.Query = "f=xml&apikey=" + ApiKey;
+
+
+            GetResponse(builder.Uri.ToString());
 
             return null;
         }
@@ -43,6 +49,8 @@ namespace Discorder
 
         public static List<ArtistDetails> SearchArtist(string query)
         {
+
+
             return new List<ArtistDetails>(SearchByType(query, SearchResultType.artist).Cast<ArtistDetails>());
         }
 
@@ -57,8 +65,8 @@ namespace Discorder
         {
 
 
-            return new List<ReleaseDetails>(SearchByType(query, SearchResultType.release).Cast<ReleaseDetails>()) ;
-    
+            return new List<ReleaseDetails>(SearchByType(query, SearchResultType.release).Cast<ReleaseDetails>());
+
         }
 
         private static List<Object> SearchByType(string searchQuery, SearchResultType type)
@@ -67,7 +75,7 @@ namespace Discorder
 
             throw new NotSupportedException("The type parameter of the Discogs REST api doesn't seem to do anything yet");
 
-        //http://www.discogs.com/search?type=all&q=deep+house&f=xml&api_key=7ccd6b4264
+            //http://www.discogs.com/search?type=all&q=deep+house&f=xml&api_key=7ccd6b4264
 
 
 
@@ -106,7 +114,7 @@ namespace Discorder
             using (GZipStream stream = new GZipStream(
                wc.OpenRead(uri), CompressionMode.Decompress, false))
             {
-                using (System.Xml.XmlReader xmlReader = System.Xml.XmlReader.Create(stream)) 
+                using (System.Xml.XmlReader xmlReader = System.Xml.XmlReader.Create(stream))
                 {
                     System.Xml.XmlDocument xmlDoc = new System.Xml.XmlDocument();
                     xmlDoc.Load(xmlReader);
@@ -114,7 +122,7 @@ namespace Discorder
                     return xmlDoc;
                 }
             }
-            
+
 
 
         }
@@ -132,9 +140,9 @@ namespace Discorder
             {
                 using (StreamReader reader = new StreamReader(stream))
                 {
-                
 
-                
+
+
                     List<Type> extraTypesList = new List<Type>();
 
                     extraTypesList.Add(typeof(ArtistDetails));
@@ -149,7 +157,7 @@ namespace Discorder
                     extraTypesList.Add(typeof(SearchResultList));
                     extraTypesList.Add(typeof(TrackInfo));
 
-                    System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Discorder.resp), extraTypesList.ToArray());
+                    System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Discorder.resp));
 
                     try
                     {
@@ -162,11 +170,11 @@ namespace Discorder
                         throw;
                     }
 
-              
+
                 }
             }
 
-            
+
 
 
         }
