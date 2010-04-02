@@ -31,9 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NAudio, Version=1.3.8.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="ObjectListView, Version=2.3.0.25274, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino_DotNET, Version=4.0.61206.11, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Rhinoceros 4.0\System\Rhino_DotNET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -52,11 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Discogs\Artist.cs" />
-    <Compile Include="Discogs\Discogs.cs" />
-    <Compile Include="Discogs\Label.cs" />
-    <Compile Include="Discogs\Release.cs" />
-    <Compile Include="Discogs\SearchResult.cs" />
+    <Compile Include="discogsxsd.cs" />
+    <Compile Include="Discogs.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +70,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

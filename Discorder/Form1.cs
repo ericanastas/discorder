@@ -15,5 +15,13 @@ namespace Discorder
         {
             InitializeComponent();
         }
+
+ 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //DiscogSite.Search("Chemical Brothers");
+            DiscogSite.GetXmlResponse(@"http://www.discogs.com/search?type=all&q=Chemical Brothers&f=xml&api_key=7ccd6b4264");
+        }
     }
 }
