@@ -25,8 +25,12 @@ namespace Discorder
             //search
             //Discogsite.GetXmlResponse(@"http://www.discogs.com/search?type=all&q=Chemical Brothers&f=xml&api_key=7ccd6b4264");
 
-            //artist
-            DiscogSite.GetArtist("Aphex Twin");
+            
+
+            DiscogSite.Search("Chemical Brothers");
+            //DiscogSite.GetArtist("Aphex Twin");
+            //DiscogSite.GetLabel("Aphex Twin");
+            //DiscogSite.GetRelease("Aphex Twin");
 
 
             

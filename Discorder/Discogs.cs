@@ -19,14 +19,14 @@ namespace Discorder
         public static string ApiKey = "7ccd6b4264";
 
 
-        public static Discorder.ReleaseDetails GetRelease(int releaseID)
+        public static Discorder.REST.ReleaseDetails GetRelease(int releaseID)
         {
             //returns a single release
             return null;
         }
 
         //http://www.discogs.com/artist/Aphex+Twin?f=xml&api_key=<API_Key>  
-        public static Discorder.ArtistDetails GetArtist(string artistName)
+        public static Discorder.REST.ArtistDetails GetArtist(string artistName)
         {
             UriBuilder builder = new UriBuilder();
             builder.Host = "www.discogs.com";
@@ -40,36 +40,36 @@ namespace Discorder
         }
 
 
-        public static Discorder.LabelDetails GetLabel(string labelName)
+        public static Discorder.REST.LabelDetails GetLabel(string labelName)
         {
             //returns a single label
             return null;
         }
 
 
-        public static List<ArtistDetails> SearchArtist(string query)
+        public static List<REST.ArtistDetails> SearchArtist(string query)
         {
 
 
-            return new List<ArtistDetails>(SearchByType(query, SearchResultType.artist).Cast<ArtistDetails>());
+            return new List<REST.ArtistDetails>(SearchByType(query, REST.SearchResultType.artist).Cast<REST.ArtistDetails>());
         }
 
 
-        public static List<LabelDetails> SearchLabel(string query)
+        public static List<REST.LabelDetails> SearchLabel(string query)
         {
-            return new List<LabelDetails>(SearchByType(query, SearchResultType.label).Cast<LabelDetails>());
+            return new List<REST.LabelDetails>(SearchByType(query, REST.SearchResultType.label).Cast<REST.LabelDetails>());
 
         }
 
-        public static List<ReleaseDetails> SearchRelease(string query)
+        public static List<REST.ReleaseDetails> SearchRelease(string query)
         {
 
 
-            return new List<ReleaseDetails>(SearchByType(query, SearchResultType.release).Cast<ReleaseDetails>());
+            return new List<REST.ReleaseDetails>(SearchByType(query, REST.SearchResultType.release).Cast<REST.ReleaseDetails>());
 
         }
 
-        private static List<Object> SearchByType(string searchQuery, SearchResultType type)
+        private static List<Object> SearchByType(string searchQuery, REST.SearchResultType type)
         {
 
 
@@ -95,7 +95,7 @@ namespace Discorder
             uriBuilder.Query = queryEncoded;
 
 
-            Discorder.resp r = GetResponse(uriBuilder.Uri.ToString());
+            Discorder.REST.resp r = GetResponse(uriBuilder.Uri.ToString());
 
             return new List<object>();
         }
@@ -128,7 +128,7 @@ namespace Discorder
         }
 
 
-        private static Discorder.resp GetResponse(string uri)
+        private static Discorder.REST.resp GetResponse(string uri)
         {
             WebClient wc = new WebClient();
             wc.Headers.Add(HttpRequestHeader.AcceptEncoding, "gzip");
@@ -145,23 +145,23 @@ namespace Discorder
 
                     List<Type> extraTypesList = new List<Type>();
 
-                    extraTypesList.Add(typeof(ArtistDetails));
-                    extraTypesList.Add(typeof(ArtistInfo));
-                    extraTypesList.Add(typeof(FormatInfo));
-                    extraTypesList.Add(typeof(ImageInfo));
-                    extraTypesList.Add(typeof(LabelInfo));
-                    extraTypesList.Add(typeof(ReleaseDetails));
-                    extraTypesList.Add(typeof(ReleaseInfo));
-                    extraTypesList.Add(typeof(resp));
-                    extraTypesList.Add(typeof(SearchResult));
-                    extraTypesList.Add(typeof(SearchResultList));
-                    extraTypesList.Add(typeof(TrackInfo));
+                    extraTypesList.Add(typeof(REST.ArtistDetails));
+                    extraTypesList.Add(typeof(REST.ArtistInfo));
+                    extraTypesList.Add(typeof(REST.FormatInfo));
+                    extraTypesList.Add(typeof(REST.ImageInfo));
+                    extraTypesList.Add(typeof(REST.LabelInfo));
+                    extraTypesList.Add(typeof(REST.ReleaseDetails));
+                    extraTypesList.Add(typeof(REST.ReleaseInfo));
+                    extraTypesList.Add(typeof(REST.resp));
+                    extraTypesList.Add(typeof(REST.SearchResult));
+                    extraTypesList.Add(typeof(REST.SearchResultList));
+                    extraTypesList.Add(typeof(REST.TrackInfo));
 
-                    System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Discorder.resp));
+                    System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Discorder.REST.resp));
 
                     try
                     {
-                        Discorder.resp response = (Discorder.resp)xmlSerializer.Deserialize(reader);
+                        Discorder.REST.resp response = (Discorder.REST.resp)xmlSerializer.Deserialize(reader);
                         return response;
                     }
                     catch (InvalidOperationException exp)
