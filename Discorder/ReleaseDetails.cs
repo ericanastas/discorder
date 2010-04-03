@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Discorder.REST
+namespace Discorder
 {
     [System.SerializableAttribute()]
     public class ReleaseDetails

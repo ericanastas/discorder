@@ -3,29 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Discorder.REST
+namespace Discorder
 {
     [System.SerializableAttribute()]
-    public class LabelDetails
+    public class ArtistDetails
     {
 
         private ImageInfo[] imagesField;
 
         private string nameField;
 
-        private string contactinfoField;
+        private string realnameField;
 
         private string profileField;
 
-        private string parentLabelField;
-
         private string[] urlsField;
 
-        private string[] sublabelsField;
+        private string[] namevariationsField;
+
+        private string[] aliasesField;
+
+        private string[] groupsField;
+
+        private string[] membersField;
 
         private ReleaseInfo[] releasesField;
 
-        /// <remarks/>
+
         [System.Xml.Serialization.XmlArrayItemAttribute("image", IsNullable = false)]
         public ImageInfo[] images
         {
@@ -39,7 +43,7 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
+
         public string name
         {
             get
@@ -52,20 +56,20 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        public string contactinfo
+
+        public string realname
         {
             get
             {
-                return this.contactinfoField;
+                return this.realnameField;
             }
             set
             {
-                this.contactinfoField = value;
+                this.realnameField = value;
             }
         }
 
-        /// <remarks/>
+
         public string profile
         {
             get
@@ -78,20 +82,7 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        public string parentLabel
-        {
-            get
-            {
-                return this.parentLabelField;
-            }
-            set
-            {
-                this.parentLabelField = value;
-            }
-        }
 
-        /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("url", IsNullable = false)]
         public string[] urls
         {
@@ -105,21 +96,63 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("label", IsNullable = false)]
-        public string[] sublabels
+
+        [System.Xml.Serialization.XmlArrayItemAttribute("name", IsNullable = false)]
+        public string[] namevariations
         {
             get
             {
-                return this.sublabelsField;
+                return this.namevariationsField;
             }
             set
             {
-                this.sublabelsField = value;
+                this.namevariationsField = value;
             }
         }
 
-        /// <remarks/>
+
+        [System.Xml.Serialization.XmlArrayItemAttribute("name", IsNullable = false)]
+        public string[] aliases
+        {
+            get
+            {
+                return this.aliasesField;
+            }
+            set
+            {
+                this.aliasesField = value;
+            }
+        }
+
+
+        [System.Xml.Serialization.XmlArrayItemAttribute("name", IsNullable = false)]
+        public string[] groups
+        {
+            get
+            {
+                return this.groupsField;
+            }
+            set
+            {
+                this.groupsField = value;
+            }
+        }
+
+
+        [System.Xml.Serialization.XmlArrayItemAttribute("name", IsNullable = false)]
+        public string[] members
+        {
+            get
+            {
+                return this.membersField;
+            }
+            set
+            {
+                this.membersField = value;
+            }
+        }
+
+
         [System.Xml.Serialization.XmlArrayItemAttribute("release", IsNullable = false)]
         public ReleaseInfo[] releases
         {
@@ -133,4 +166,5 @@ namespace Discorder.REST
             }
         }
     }
+    
 }

@@ -25,12 +25,12 @@ namespace Discorder
             
           
 
-            REST.SearchResultList exactList;
-            REST.SearchResultList results;
-            DiscogSite.Search("Chemical Brothers", out results, out exactList);
-            REST.ArtistDetails a = DiscogSite.GetArtist("Aphex Twin");
-            REST.LabelDetails l = DiscogSite.GetLabel("Tidy");
-            REST.ReleaseDetails r = DiscogSite.GetRelease(1138729);
+            SearchResultList exactList;
+            SearchResultList results;
+            Discogs.Search("Chemical Brothers", out results, out exactList);
+            ArtistDetails a = Discogs.GetArtist("Aphex Twin");
+            LabelDetails l = Discogs.GetLabel("Tidy");
+            ReleaseDetails r = Discogs.GetRelease(1138729);
 
 
             

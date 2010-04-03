@@ -60,19 +60,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="REST\ArtistDetails.cs" />
-    <Compile Include="REST\ArtistInfo.cs" />
-    <Compile Include="REST\ReleaseInfo.cs" />
-    <Compile Include="REST\LabelDetails.cs" />
-    <Compile Include="REST\ReleaseDetails.cs" />
-    <Compile Include="REST\LabelInfo.cs" />
-    <Compile Include="REST\FormatInfo.cs" />
-    <Compile Include="REST\TrackInfo.cs" />
-    <Compile Include="REST\SearchResultList.cs" />
-    <Compile Include="REST\Enums.cs" />
-    <Compile Include="REST\SearchResult.cs" />
-    <Compile Include="REST\ImageInfo.cs" />
-    <Compile Include="REST\resp.cs" />
+    <Compile Include="ArtistDetails.cs" />
+    <Compile Include="ArtistInfo.cs" />
+    <Compile Include="ReleaseInfo.cs" />
+    <Compile Include="LabelDetails.cs" />
+    <Compile Include="ReleaseDetails.cs" />
+    <Compile Include="LabelInfo.cs" />
+    <Compile Include="FormatInfo.cs" />
+    <Compile Include="TrackInfo.cs" />
+    <Compile Include="SearchResultList.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="SearchResult.cs" />
+    <Compile Include="ImageInfo.cs" />
+    <Compile Include="resp.cs" />
     <Compile Include="Discogs.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -99,7 +99,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="REST\DiscogsREST.cd" />
+    <None Include="ClassDiagram.cd" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>

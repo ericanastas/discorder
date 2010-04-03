@@ -3,30 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Discorder.REST
+namespace Discorder
 {
     [System.SerializableAttribute()]
 
     public class SearchResult
     {
-
         private string titleField;
-
         private string anvField;
-
         private string uriField;
-
         private string summaryField;
-
         private int numField;
-
         private bool numFieldSpecified;
-
         private SearchResultType typeField;
 
-        private bool typeFieldSpecified;
-
-        /// <remarks/>
         public string title
         {
             get
@@ -39,7 +29,7 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
+
         public string anv
         {
             get
@@ -52,7 +42,6 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
         public string uri
         {
             get
@@ -65,7 +54,6 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
         public string summary
         {
             get
@@ -78,7 +66,7 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
+
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public int num
         {
@@ -92,7 +80,7 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
+
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool numSpecified
         {
@@ -106,7 +94,7 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
+
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public SearchResultType type
         {
@@ -120,18 +108,5 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool typeSpecified
-        {
-            get
-            {
-                return this.typeFieldSpecified;
-            }
-            set
-            {
-                this.typeFieldSpecified = value;
-            }
-        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace Discorder.REST
+namespace Discorder
 {
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false, ElementName = "resp")]

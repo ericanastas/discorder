@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="Discorder.REST.ArtistDetails">
-    <Position X="8.25" Y="8.75" Width="2.5" />
+  <Class Name="Discorder.ArtistDetails">
+    <Position X="7.75" Y="3.5" Width="4" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -13,8 +13,8 @@
       <Property Name="releases" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.TrackInfo">
-    <Position X="13.5" Y="3.75" Width="3" />
+  <Class Name="Discorder.TrackInfo">
+    <Position X="26.5" Y="6.5" Width="3" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -27,44 +27,44 @@
       <Property Name="extraartists" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.ArtistInfo">
-    <Position X="13.25" Y="6.25" Width="5.75" />
+  <Class Name="Discorder.ArtistInfo">
+    <Position X="26.5" Y="9" Width="5.75" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAQACAAAAAAIABQAIIIABAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAQACAAAAAAIAhQAIIAABQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>REST\ArtistInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Discorder.REST.FormatInfo">
-    <Position X="8.25" Y="3.75" Width="2.75" />
+  <Class Name="Discorder.FormatInfo">
+    <Position X="21" Y="6.5" Width="2.75" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAEAAIIAAAAAAAAAEAIEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAgAEAAAIAAAAQAAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>REST\FormatInfo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="name" />
+      <Property Name="Name" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.ImageInfo">
-    <Position X="17.5" Y="11.75" Width="3.25" />
+  <Class Name="Discorder.ImageInfo">
+    <Position X="15" Y="9.75" Width="4.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAQCQAABAAAAAAAJAAAAAAAgEAAEAAA=</HashCode>
+      <HashCode>AAAgAAAABAACAAACAAABAEAAACAAAAAAAQAAEAAEAAA=</HashCode>
       <FileName>REST\ImageInfo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="type" />
+      <Property Name="Type" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.LabelDetails">
-    <Position X="11.25" Y="8.75" Width="7.75" />
+  <Class Name="Discorder.LabelDetails">
+    <Position X="12.25" Y="3.25" Width="5.25" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -77,37 +77,37 @@
       <Property Name="releases" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.LabelInfo">
-    <Position X="11.5" Y="3.75" Width="1.5" />
+  <Class Name="Discorder.LabelInfo">
+    <Position X="24.25" Y="6.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAAIAAAAAAAAAEAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAIAAAAAAAAACAAAIAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>REST\LabelInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Discorder.REST.ReleaseDetails">
-    <Position X="8.5" Y="0.5" Width="13.75" />
+  <Class Name="Discorder.ReleaseDetails">
+    <Position X="18.5" Y="3.25" Width="13.75" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>QBQIAAAAQABAEBAAIAACAAYCFQAEACiDQgAAgAhAIgA=</HashCode>
+      <HashCode>ABAgAAAUEAAAgEAAYAICAAQABAICADmBRkAAgAgAIAA=</HashCode>
       <FileName>REST\ReleaseDetails.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="images" />
-      <Property Name="artists" />
-      <Property Name="labels" />
-      <Property Name="extraartists" />
-      <Property Name="formats" />
-      <Property Name="tracklist" />
-      <Property Name="status" />
+      <Property Name="ExtraArtists" />
+      <Property Name="Artists" />
+      <Property Name="Formats" />
+      <Property Name="Labels" />
+      <Property Name="Images" />
+      <Property Name="TrackList" />
+      <Property Name="Status" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.ReleaseInfo">
-    <Position X="8.25" Y="12" Width="5.25" />
+  <Class Name="Discorder.ReleaseInfo">
+    <Position X="7.75" Y="9.75" Width="6.75" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -120,93 +120,96 @@
       <Property Name="type" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.Response">
-    <Position X="3.25" Y="0.5" Width="3.5" />
+  <Class Name="Discorder.Response">
+    <Position X="0.75" Y="0.5" Width="22.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAgACCAAABACAAAAAABABAAAIFAAgQAEEAAABIAAAA=</HashCode>
+      <HashCode>AAAAACAAEEBAAABAAAAIABAACIFAAgQAEAAAABAAAAg=</HashCode>
       <FileName>REST\resp.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="ItemsElementName" />
       <Property Name="stat" />
+      <Property Name="SearchResults" />
+      <Property Name="SearchResultsExact" />
+      <Property Name="Artist" />
+      <Property Name="Label" />
+      <Property Name="Release" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.SearchResult">
-    <Position X="0.5" Y="2.5" Width="2" />
+  <Class Name="Discorder.SearchResult">
+    <Position X="2.5" Y="5.5" Width="4" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABAQACAAQIBCQAQAAAAQAAAAAAAJAAAAAAAAEAAAhAA=</HashCode>
+      <HashCode>ABAQACAAQIACQAQAAAAAAAAAAAAJAAAAAAAAEAAAhAA=</HashCode>
       <FileName>REST\SearchResult.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="type" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.SearchResultList">
-    <Position X="0.5" Y="0.5" Width="2.25" />
+  <Class Name="Discorder.SearchResultList">
+    <Position X="2.5" Y="3.5" Width="4" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
+    <AssociationLine Name="Results" Type="Discorder.SearchResult" FixedToPoint="true">
+      <Path>
+        <Point X="4.625" Y="5.027" />
+        <Point X="4.625" Y="5.5" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAQACAAAAAAAgBAAIAAAAABIAAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>AAAAAQACAAAAAAAgAAAIAAAACBIAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>REST\SearchResultList.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="result" />
+      <Property Name="Results" />
     </ShowAsAssociation>
   </Class>
-  <Enum Name="Discorder.REST.ResponseStatus">
-    <Position X="3" Y="3" Width="1.5" />
+  <Enum Name="Discorder.ResponseStatus">
+    <Position X="0.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>REST\Enums.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Discorder.REST.ItemsChoiceType">
-    <Position X="5.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAABBAAAAAgAAAAAAAAAAAAAABAAAAAAA=</HashCode>
-      <FileName>REST\Enums.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="Discorder.REST.ReleaseType">
-    <Position X="8.25" Y="16" Width="1.5" />
+  <Enum Name="Discorder.ReleaseType">
+    <Position X="7.75" Y="13.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAIAAEAAIAACAAQAAAAQAAAAAAAABAAAEAA=</HashCode>
       <FileName>REST\Enums.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Discorder.REST.ReleaseStatus">
-    <Position X="12.25" Y="16" Width="10" />
+  <Enum Name="Discorder.ReleaseStatus">
+    <Position X="11.5" Y="13.75" Width="10.25" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>REST\Enums.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Discorder.REST.SearchResultType">
-    <Position X="0.5" Y="5.5" Width="1.5" />
+  <Enum Name="Discorder.SearchResultType">
+    <Position X="2.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAABAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>REST\Enums.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Discorder.REST.FormatName">
-    <Position X="8.25" Y="6.25" Width="2.75" />
+  <Enum Name="Discorder.FormatName">
+    <Position X="21" Y="9" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAYAAAACCAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>REST\Enums.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Discorder.REST.ImageType">
-    <Position X="17.5" Y="14.25" Width="3.25" />
+  <Enum Name="Discorder.ImageType">
+    <Position X="15" Y="12" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAIAAAAAAAAA=</HashCode>
-      <FileName>REST\ImageType.cs</FileName>
+      <FileName>REST\Enums.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Tahoma" Size="8.25" />
