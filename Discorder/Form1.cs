@@ -27,7 +27,7 @@ namespace Discorder
 
             SearchResultList exactList;
             SearchResultList results;
-            Discogs.Search("Chemical Brothers", out results, out exactList);
+            Discogs.Search("Chemical Brothers",1, out results, out exactList);
             ArtistDetails a = Discogs.GetArtist("Aphex Twin");
             LabelDetails l = Discogs.GetLabel("Tidy");
             ReleaseDetails r = Discogs.GetRelease(1138729);
