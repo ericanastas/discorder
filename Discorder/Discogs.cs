@@ -50,12 +50,12 @@ namespace Discorder
             return r.Label;
         }
 
-        public static void Search(string query, out SearchResultList searchResults, out SearchResultList exactResults)
+        public static void Search(string query,int pageNumber, out SearchResultList searchResults, out SearchResultList exactResults)
         {
             UriBuilder uriBuilder = new UriBuilder();
             uriBuilder.Host = "www.discogs.com";
             uriBuilder.Path = "search";
-            string queryEncoded = "type=all&q=" + System.Uri.EscapeDataString(query) + "&f=xml&api_key=" + ApiKey;
+            string queryEncoded = "type=all&q=" + System.Uri.EscapeDataString(query) + "&f=xml&api_key=" + ApiKey+"&page="+pageNumber.ToString();
             uriBuilder.Query = queryEncoded;
             Response r = GetResponse(uriBuilder.Uri.ToString());
 
@@ -75,23 +75,6 @@ namespace Discorder
             {
                 using (StreamReader reader = new StreamReader(stream))
                 {
-
-
-
-                    List<Type> extraTypesList = new List<Type>();
-
-                    extraTypesList.Add(typeof(ArtistDetails));
-                    extraTypesList.Add(typeof(ArtistInfo));
-                    extraTypesList.Add(typeof(FormatInfo));
-                    extraTypesList.Add(typeof(ImageInfo));
-                    extraTypesList.Add(typeof(LabelInfo));
-                    extraTypesList.Add(typeof(ReleaseDetails));
-                    extraTypesList.Add(typeof(ReleaseInfo));
-                    extraTypesList.Add(typeof(Response));
-                    extraTypesList.Add(typeof(SearchResult));
-                    extraTypesList.Add(typeof(SearchResultList));
-                    extraTypesList.Add(typeof(TrackInfo));
-
                     System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Discorder.Response));
 
                     try
@@ -104,8 +87,6 @@ namespace Discorder
 
                         throw;
                     }
-
-
                 }
             }
 
