@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Discorder
 {
-    public partial class Form1 : Form
+    public partial class DiscorderForm : Form
     {
-        public Form1()
+        public DiscorderForm()
         {
             InitializeComponent();
         }
@@ -27,10 +27,10 @@ namespace Discorder
 
             SearchResultList exactList;
             SearchResultList results;
-            Discogs.Search("Chemical Brothers",1, out results, out exactList);
+            Discogs.Search("It Began In Afrika",SearchType.all, 1, out results, out exactList);
             ArtistDetails a = Discogs.GetArtist("Aphex Twin");
             LabelDetails l = Discogs.GetLabel("Tidy");
-            ReleaseDetails r = Discogs.GetRelease(1138729);
+            ReleaseDetails r = Discogs.GetRelease(95682);
 
 
             

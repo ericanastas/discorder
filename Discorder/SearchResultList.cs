@@ -13,7 +13,7 @@ namespace Discorder
         private int endField;
         private int numResultsField;
         private int startField;
-
+        
         [System.Xml.Serialization.XmlElementAttribute("result")]
         public SearchResult[] Results
         {

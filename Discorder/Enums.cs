@@ -38,6 +38,18 @@ namespace Discorder
         Rejected
     }
 
+    public enum SearchType
+    {
+        all,
+        artists,
+        labels,
+        releases,
+        catno,
+        needsvote,
+        forsale,
+        digital
+    }
+
     [System.SerializableAttribute()]
     public enum SearchResultType
     {
@@ -47,6 +59,8 @@ namespace Discorder
         label,
 
         release
+
+
     }
 
     [System.SerializableAttribute()]
@@ -56,6 +70,7 @@ namespace Discorder
         BoxSet,
         Cassette,
         CD,
+        CDr,
         File,
         Vinyl
     }

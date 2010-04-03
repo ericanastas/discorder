@@ -50,12 +50,13 @@ namespace Discorder
             return r.Label;
         }
 
-        public static void Search(string query,int pageNumber, out SearchResultList searchResults, out SearchResultList exactResults)
+        public static void Search(string query,SearchType type, int pageNumber, out SearchResultList searchResults, out SearchResultList exactResults)
         {
             UriBuilder uriBuilder = new UriBuilder();
             uriBuilder.Host = "www.discogs.com";
             uriBuilder.Path = "search";
-            string queryEncoded = "type=all&q=" + System.Uri.EscapeDataString(query) + "&f=xml&api_key=" + ApiKey+"&page="+pageNumber.ToString();
+            string queryEncoded = "type="+Enum.GetName(typeof(SearchType),type)+"&q="+System.Uri.EscapeDataString(query) + "&f=xml&api_key=" + ApiKey+"&page="+pageNumber.ToString();
+
             uriBuilder.Query = queryEncoded;
             Response r = GetResponse(uriBuilder.Uri.ToString());
 

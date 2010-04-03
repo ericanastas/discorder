@@ -1,6 +1,6 @@
 ﻿namespace Discorder
 {
-    partial class Form1
+    partial class DiscorderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -41,13 +41,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // DiscorderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 266);
+            this.ClientSize = new System.Drawing.Size(627, 524);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "DiscorderForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
