@@ -97,13 +97,13 @@
       <FileName>REST\ReleaseDetails.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="formats" />
-      <Property Name="extraartists" />
-      <Property Name="artists" />
       <Property Name="images" />
+      <Property Name="artists" />
       <Property Name="labels" />
-      <Property Name="status" />
+      <Property Name="extraartists" />
+      <Property Name="formats" />
       <Property Name="tracklist" />
+      <Property Name="status" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Discorder.REST.ReleaseInfo">
@@ -116,17 +116,17 @@
       <FileName>REST\ReleaseInfo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="type" />
       <Property Name="status" />
+      <Property Name="type" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Discorder.REST.resp">
+  <Class Name="Discorder.REST.Response">
     <Position X="3.25" Y="0.5" Width="3.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAgACCAAABACAAAAAABAAAAAABAAgQAEEAAAAIAAAA=</HashCode>
+      <HashCode>AAAgACCAAABACAAAAAABABAAAIFAAgQAEEAAABIAAAA=</HashCode>
       <FileName>REST\resp.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

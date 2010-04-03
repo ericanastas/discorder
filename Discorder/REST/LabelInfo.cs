@@ -8,14 +8,11 @@ namespace Discorder.REST
     [System.SerializableAttribute()]
     public class LabelInfo
     {
-
         private string catnoField;
-
         private string nameField;
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string catno
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName = "catno")]
+        public string CatalogNumber
         {
             get
             {
@@ -27,9 +24,8 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string name
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName="name")]
+        public string Name
         {
             get
             {

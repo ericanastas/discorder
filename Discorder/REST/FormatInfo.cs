@@ -8,16 +8,13 @@ namespace Discorder.REST
     [System.SerializableAttribute()]
     public class FormatInfo
     {
-
-        private string[][] descriptionsField;
-
+        private string[] descriptionsField;
         private FormatName nameField;
-
         private int qtyField;
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("description", typeof(string), IsNullable = false)]
-        public string[][] descriptions
+        [System.Xml.Serialization.XmlArrayAttribute(ElementName = "descriptions")]
+        [System.Xml.Serialization.XmlArrayItemAttribute("description")]        
+        public string[] Descriptions
         {
             get
             {
@@ -29,9 +26,8 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public FormatName name
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName="name")]
+        public FormatName Name
         {
             get
             {
@@ -43,9 +39,8 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int qty
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName="qty")]
+        public int Quanity
         {
             get
             {

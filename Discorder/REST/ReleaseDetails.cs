@@ -8,40 +8,25 @@ namespace Discorder.REST
     [System.SerializableAttribute()]
     public class ReleaseDetails
     {
-
         private ImageInfo[] imagesField;
-
         private ArtistInfo[] artistsField;
-
         private string titleField;
-
         private LabelInfo[] labelsField;
-
         private ArtistInfo[] extraartistsField;
-
         private FormatInfo[] formatsField;
-
         private string[] genresField;
-
         private string[] stylesField;
-
         private string countryField;
-
         private string releasedField;
-
         private string notesField;
-
         private TrackInfo[] tracklistField;
-
         private int idField;
-
         private ReleaseStatus statusField;
 
-        private bool statusFieldSpecified;
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("image", IsNullable = false)]
-        public ImageInfo[] images
+        [System.Xml.Serialization.XmlArrayAttribute(ElementName = "images")]
+        [System.Xml.Serialization.XmlArrayItemAttribute("image")]
+        public ImageInfo[] Images
         {
             get
             {
@@ -53,9 +38,9 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("artist", IsNullable = false)]
-        public ArtistInfo[] artists
+        [System.Xml.Serialization.XmlArrayAttribute(ElementName = "artists")]
+        [System.Xml.Serialization.XmlArrayItemAttribute("artist")]
+        public ArtistInfo[] Artists
         {
             get
             {
@@ -67,8 +52,8 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        public string title
+        [System.Xml.Serialization.XmlElementAttribute("title")]
+        public string Title
         {
             get
             {
@@ -80,9 +65,9 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("label", IsNullable = false)]
-        public LabelInfo[] labels
+        [System.Xml.Serialization.XmlArrayAttribute(ElementName = "labels")]
+        [System.Xml.Serialization.XmlArrayItemAttribute("label")]
+        public LabelInfo[] Labels
         {
             get
             {
@@ -94,9 +79,10 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("artist", IsNullable = false)]
-        public ArtistInfo[] extraartists
+        
+        [System.Xml.Serialization.XmlArrayAttribute(ElementName = "extraartists")]
+        [System.Xml.Serialization.XmlArrayItemAttribute("artist")]
+        public ArtistInfo[] ExtraArtists
         {
             get
             {
@@ -108,9 +94,9 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("format", IsNullable = false)]
-        public FormatInfo[] formats
+        [System.Xml.Serialization.XmlArrayAttribute(ElementName = "formats")]
+        [System.Xml.Serialization.XmlArrayItemAttribute("format")]
+        public FormatInfo[] Formats
         {
             get
             {
@@ -122,9 +108,9 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("genre", IsNullable = false)]
-        public string[] genres
+        [System.Xml.Serialization.XmlArrayAttribute(ElementName = "genres")]
+        [System.Xml.Serialization.XmlArrayItemAttribute("genre")]
+        public string[] Genres
         {
             get
             {
@@ -136,9 +122,9 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("style", IsNullable = false)]
-        public string[] styles
+        [System.Xml.Serialization.XmlArrayAttribute(ElementName = "styles")]
+        [System.Xml.Serialization.XmlArrayItemAttribute("style")]
+        public string[] Styles
         {
             get
             {
@@ -150,48 +136,9 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        public string country
-        {
-            get
-            {
-                return this.countryField;
-            }
-            set
-            {
-                this.countryField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string released
-        {
-            get
-            {
-                return this.releasedField;
-            }
-            set
-            {
-                this.releasedField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string notes
-        {
-            get
-            {
-                return this.notesField;
-            }
-            set
-            {
-                this.notesField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("track", IsNullable = false)]
-        public TrackInfo[] tracklist
+        [System.Xml.Serialization.XmlArrayAttribute(ElementName="tracklist")]
+        [System.Xml.Serialization.XmlArrayItemAttribute("track")]
+        public TrackInfo[] TrackList
         {
             get
             {
@@ -203,9 +150,47 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int id
+        [System.Xml.Serialization.XmlElementAttribute("country")]
+        public string Country
+        {
+            get
+            {
+                return this.countryField;
+            }
+            set
+            {
+                this.countryField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlElementAttribute("released")]
+        public string Released
+        {
+            get
+            {
+                return this.releasedField;
+            }
+            set
+            {
+                this.releasedField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlElementAttribute("notes")]
+        public string Notes
+        {
+            get
+            {
+                return this.notesField;
+            }
+            set
+            {
+                this.notesField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName = "id")]
+        public int ID
         {
             get
             {
@@ -217,9 +202,8 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public ReleaseStatus status
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName = "status")]
+        public ReleaseStatus Status
         {
             get
             {
@@ -231,18 +215,5 @@ namespace Discorder.REST
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool statusSpecified
-        {
-            get
-            {
-                return this.statusFieldSpecified;
-            }
-            set
-            {
-                this.statusFieldSpecified = value;
-            }
-        }
     }
 }

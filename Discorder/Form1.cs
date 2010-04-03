@@ -20,17 +20,17 @@ namespace Discorder
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //DiscogSite.Search("Chemical Brothers");
-
-            //search
-            //Discogsite.GetXmlResponse(@"http://www.discogs.com/search?type=all&q=Chemical Brothers&f=xml&api_key=7ccd6b4264");
-
             
 
-            DiscogSite.Search("Chemical Brothers");
-            //DiscogSite.GetArtist("Aphex Twin");
-            //DiscogSite.GetLabel("Aphex Twin");
-            //DiscogSite.GetRelease("Aphex Twin");
+            
+          
+
+            REST.SearchResultList exactList;
+            REST.SearchResultList results;
+            DiscogSite.Search("Chemical Brothers", out results, out exactList);
+            REST.ArtistDetails a = DiscogSite.GetArtist("Aphex Twin");
+            REST.LabelDetails l = DiscogSite.GetLabel("Tidy");
+            REST.ReleaseDetails r = DiscogSite.GetRelease(1138729);
 
 
             

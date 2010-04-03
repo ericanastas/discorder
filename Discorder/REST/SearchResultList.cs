@@ -15,7 +15,7 @@ namespace Discorder.REST
         private int startField;
 
         [System.Xml.Serialization.XmlElementAttribute("result")]
-        public SearchResult[] result
+        public SearchResult[] Results
         {
             get
             {

@@ -8,20 +8,15 @@ namespace Discorder.REST
     [System.SerializableAttribute()]
     public class ImageInfo
     {
-
         private int heightField;
-
         private ImageType typeField;
-
         private string uriField;
-
         private string uri150Field;
-
         private int widthField;
 
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int height
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName="height")]
+        public int Height
         {
             get
             {
@@ -34,8 +29,8 @@ namespace Discorder.REST
         }
 
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public ImageType type
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName = "type")]
+        public ImageType Type
         {
             get
             {
@@ -48,8 +43,8 @@ namespace Discorder.REST
         }
 
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string uri
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName = "uri")]
+        public string URI
         {
             get
             {
@@ -62,8 +57,8 @@ namespace Discorder.REST
         }
 
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string uri150
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName = "uri150")]
+        public string URI150
         {
             get
             {
@@ -76,8 +71,8 @@ namespace Discorder.REST
         }
 
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int width
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName = "width")]
+        public int Width
         {
             get
             {

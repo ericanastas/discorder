@@ -1,60 +1,84 @@
 ﻿using System.Xml.Serialization;
 
-namespace Discorder.REST {
-
-       
-
+namespace Discorder.REST
+{
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="", IsNullable=false)]
-    public class resp {
-        
-        private object[] itemsField;
-        
-        private ItemsChoiceType[] itemsElementNameField;
-        
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false, ElementName = "resp")]
+    public class Response
+    {
+        private ArtistDetails artistdetailsField;
+        private ReleaseDetails releaseDetailsField;
+        private LabelDetails labeldetailsField;
+        private SearchResultList searchResultsExact;
+        private SearchResultList searchResults;
         private ResponseStatus statField;
-        
         private float versionField;
-        
         private int requestsField;
-        
-        private bool requestsFieldSpecified;
 
+        [System.Xml.Serialization.XmlElementAttribute("exactresults", typeof(SearchResultList))]
+        public SearchResultList SearchResultsExact
+        {
+            get
+            {
+                return this.searchResultsExact;
+            }
+            set
+            {
+                this.searchResultsExact = value;
+            }
+        }
 
+        [System.Xml.Serialization.XmlElementAttribute("searchresults", typeof(SearchResultList))]
+        public SearchResultList SearchResults
+        {
+            get
+            {
+                return this.searchResults;
+            }
+            set
+            {
+                this.searchResults = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlElementAttribute("label", typeof(LabelDetails))]
+        public LabelDetails Label
+        {
+            get
+            {
+                return this.labeldetailsField;
+            }
+            set
+            {
+                this.labeldetailsField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlElementAttribute("release", typeof(ReleaseDetails))]
+        public ReleaseDetails Release
+        {
+            get
+            {
+                return this.releaseDetailsField;
+            }
+            set
+            {
+                this.releaseDetailsField = value;
+            }
+        }
 
         [System.Xml.Serialization.XmlElementAttribute("artist", typeof(ArtistDetails))]
-        [System.Xml.Serialization.XmlElementAttribute("exactresults", typeof(SearchResultList))]
-        //[System.Xml.Serialization.XmlElementAttribute("label", typeof(LabelDetails))]
-        //[System.Xml.Serialization.XmlElementAttribute("release", typeof(ReleaseDetails))]
-        //[System.Xml.Serialization.XmlElementAttribute("searchresults", typeof(SearchResultList))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
-        public object[] Items
+        public ArtistDetails Artist
         {
             get
             {
-                return this.itemsField;
+                return this.artistdetailsField;
             }
             set
             {
-                this.itemsField = value;
+                this.artistdetailsField = value;
             }
         }
-
-
-        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemsChoiceType[] ItemsElementName
-        {
-            get
-            {
-                return this.itemsElementNameField;
-            }
-            set
-            {
-                this.itemsElementNameField = value;
-            }
-        }
-
 
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ResponseStatus stat
@@ -82,7 +106,6 @@ namespace Discorder.REST {
             }
         }
 
-
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public int requests
         {
@@ -96,20 +119,5 @@ namespace Discorder.REST {
             }
         }
 
-
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool requestsSpecified
-        {
-            get
-            {
-                return this.requestsFieldSpecified;
-            }
-            set
-            {
-                this.requestsFieldSpecified = value;
-            }
-        }
     }
-    
-
 }

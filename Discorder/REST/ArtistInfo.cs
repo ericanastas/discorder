@@ -8,19 +8,14 @@ namespace Discorder.REST
     [System.SerializableAttribute()]
     public class ArtistInfo
     {
-
         private string nameField;
-
         private string anvField;
-
         private string roleField;
-
         private string tracksField;
-
         private string joinField;
 
-
-        public string name
+        [System.Xml.Serialization.XmlElementAttribute("name")]
+        public string Name
         {
             get
             {
@@ -33,6 +28,7 @@ namespace Discorder.REST
         }
 
 
+        [System.Xml.Serialization.XmlElementAttribute("anv")]
         public string anv
         {
             get
@@ -46,6 +42,7 @@ namespace Discorder.REST
         }
 
 
+        [System.Xml.Serialization.XmlElementAttribute("role")]
         public string role
         {
             get
@@ -59,6 +56,7 @@ namespace Discorder.REST
         }
 
 
+        [System.Xml.Serialization.XmlElementAttribute("tracks")]
         public string tracks
         {
             get
@@ -71,7 +69,9 @@ namespace Discorder.REST
             }
         }
 
-        public string join
+
+        [System.Xml.Serialization.XmlElementAttribute("join")]
+        public string Join
         {
             get
             {

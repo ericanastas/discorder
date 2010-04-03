@@ -71,7 +71,6 @@
     <Compile Include="REST\SearchResultList.cs" />
     <Compile Include="REST\Enums.cs" />
     <Compile Include="REST\SearchResult.cs" />
-    <Compile Include="REST\ImageType.cs" />
     <Compile Include="REST\ImageInfo.cs" />
     <Compile Include="REST\resp.cs" />
     <Compile Include="Discogs.cs" />
