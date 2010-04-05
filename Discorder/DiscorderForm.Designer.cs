@@ -51,7 +51,7 @@
             this.tESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.releaseDetailsControl1 = new Discorder.ReleaseDetailsControl();
+            this.userControl11 = new Discorder.UserControl1();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -68,7 +68,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 26);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -80,7 +80,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(6);
-            this.splitContainer1.Size = new System.Drawing.Size(792, 543);
+            this.splitContainer1.Size = new System.Drawing.Size(792, 542);
             this.splitContainer1.SplitterDistance = 396;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -91,7 +91,7 @@
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(384, 531);
+            this.groupBox1.Size = new System.Drawing.Size(384, 530);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Discogs";
@@ -99,7 +99,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 372F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox4, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -107,17 +107,17 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 297F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(372, 506);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(372, 505);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.releaseDetailsControl1);
+            this.groupBox3.Controls.Add(this.userControl11);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(3, 212);
+            this.groupBox3.Location = new System.Drawing.Point(3, 108);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(366, 291);
+            this.groupBox3.Size = new System.Drawing.Size(366, 394);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Release Details";
@@ -128,7 +128,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(366, 203);
+            this.groupBox4.Size = new System.Drawing.Size(366, 99);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
@@ -150,7 +150,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(360, 184);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(360, 80);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // textBox2
@@ -202,7 +202,7 @@
             this.virtualObjectListView1.Location = new System.Drawing.Point(3, 33);
             this.virtualObjectListView1.Name = "virtualObjectListView1";
             this.virtualObjectListView1.ShowGroups = false;
-            this.virtualObjectListView1.Size = new System.Drawing.Size(354, 148);
+            this.virtualObjectListView1.Size = new System.Drawing.Size(354, 44);
             this.virtualObjectListView1.TabIndex = 3;
             this.virtualObjectListView1.UseCompatibleStateImageBehavior = false;
             this.virtualObjectListView1.View = System.Windows.Forms.View.Details;
@@ -237,7 +237,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(380, 531);
+            this.groupBox2.Size = new System.Drawing.Size(380, 530);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Local Files";
@@ -286,49 +286,50 @@
             this.collapseToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(792, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(792, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(40, 22);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // tESTToolStripMenuItem
             // 
             this.tESTToolStripMenuItem.Name = "tESTToolStripMenuItem";
-            this.tESTToolStripMenuItem.Size = new System.Drawing.Size(56, 22);
+            this.tESTToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.tESTToolStripMenuItem.Text = "TEST";
             this.tESTToolStripMenuItem.Click += new System.EventHandler(this.tESTToolStripMenuItem_Click);
             // 
             // collapseToolStripMenuItem1
             // 
             this.collapseToolStripMenuItem1.Name = "collapseToolStripMenuItem1";
-            this.collapseToolStripMenuItem1.Size = new System.Drawing.Size(69, 22);
+            this.collapseToolStripMenuItem1.Size = new System.Drawing.Size(55, 20);
             this.collapseToolStripMenuItem1.Text = "Discogs";
             this.collapseToolStripMenuItem1.Click += new System.EventHandler(this.collapseToolStripMenuItem1_Click);
             // 
             // collapseToolStripMenuItem
             // 
             this.collapseToolStripMenuItem.Name = "collapseToolStripMenuItem";
-            this.collapseToolStripMenuItem.Size = new System.Drawing.Size(84, 22);
+            this.collapseToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.collapseToolStripMenuItem.Text = "Local Files";
             this.collapseToolStripMenuItem.Click += new System.EventHandler(this.collapseToolStripMenuItem_Click);
             // 
-            // releaseDetailsControl1
+            // userControl11
             // 
-            this.releaseDetailsControl1.Location = new System.Drawing.Point(6, 19);
-            this.releaseDetailsControl1.Name = "releaseDetailsControl1";
-            this.releaseDetailsControl1.Size = new System.Drawing.Size(354, 221);
-            this.releaseDetailsControl1.TabIndex = 0;
+            this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl11.Location = new System.Drawing.Point(3, 16);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(360, 375);
+            this.userControl11.TabIndex = 0;
             // 
             // DiscorderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 569);
+            this.ClientSize = new System.Drawing.Size(792, 566);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -378,7 +379,7 @@
         private BrightIdeasSoftware.OLVColumn resultSumCol;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem1;
-        private ReleaseDetailsControl releaseDetailsControl1;
+        private UserControl1 userControl11;
     }
 }
 
