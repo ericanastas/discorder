@@ -78,16 +78,10 @@ namespace Discorder
                 {
                     System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Discorder.Response));
 
-                    try
-                    {
+                
                         Discorder.Response response = (Discorder.Response)xmlSerializer.Deserialize(reader);
                         return response;
-                    }
-                    catch (InvalidOperationException exp)
-                    {
-
-                        throw;
-                    }
+              
                 }
             }
 
