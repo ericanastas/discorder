@@ -51,11 +51,13 @@
             this.tESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.releaseDetailsControl1 = new Discorder.ReleaseDetailsControl();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.virtualObjectListView1)).BeginInit();
@@ -111,6 +113,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.releaseDetailsControl1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 212);
             this.groupBox3.Name = "groupBox3";
@@ -314,6 +317,13 @@
             this.collapseToolStripMenuItem.Text = "Local Files";
             this.collapseToolStripMenuItem.Click += new System.EventHandler(this.collapseToolStripMenuItem_Click);
             // 
+            // releaseDetailsControl1
+            // 
+            this.releaseDetailsControl1.Location = new System.Drawing.Point(6, 19);
+            this.releaseDetailsControl1.Name = "releaseDetailsControl1";
+            this.releaseDetailsControl1.Size = new System.Drawing.Size(354, 221);
+            this.releaseDetailsControl1.TabIndex = 0;
+            // 
             // DiscorderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +339,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -367,6 +378,7 @@
         private BrightIdeasSoftware.OLVColumn resultSumCol;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem1;
+        private ReleaseDetailsControl releaseDetailsControl1;
     }
 }
 

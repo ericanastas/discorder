@@ -98,7 +98,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(625, 473);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(467, 361);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // formatsLbl
@@ -184,7 +184,7 @@
             // pictureBox
             // 
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox.Location = new System.Drawing.Point(478, 3);
+            this.pictureBox.Location = new System.Drawing.Point(320, 3);
             this.pictureBox.Name = "pictureBox";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox, 7);
             this.pictureBox.Size = new System.Drawing.Size(144, 144);
@@ -213,7 +213,7 @@
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.ReadOnly = true;
             this.notesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.notesTextBox.Size = new System.Drawing.Size(404, 62);
+            this.notesTextBox.Size = new System.Drawing.Size(246, 62);
             this.notesTextBox.TabIndex = 8;
             this.notesTextBox.Text = resources.GetString("notesTextBox.Text");
             // 
@@ -229,7 +229,7 @@
             "IMage 3",
             "Image 5",
             "Image 5"});
-            this.imagesListBox.Location = new System.Drawing.Point(478, 153);
+            this.imagesListBox.Location = new System.Drawing.Point(320, 153);
             this.imagesListBox.Name = "imagesListBox";
             this.imagesListBox.Size = new System.Drawing.Size(144, 56);
             this.imagesListBox.TabIndex = 12;
@@ -330,7 +330,7 @@
             this.tracksOLV.Cursor = System.Windows.Forms.Cursors.Default;
             this.tracksOLV.Location = new System.Drawing.Point(68, 221);
             this.tracksOLV.Name = "tracksOLV";
-            this.tracksOLV.Size = new System.Drawing.Size(554, 249);
+            this.tracksOLV.Size = new System.Drawing.Size(396, 137);
             this.tracksOLV.TabIndex = 15;
             this.tracksOLV.UseCompatibleStateImageBehavior = false;
             this.tracksOLV.View = System.Windows.Forms.View.Details;
@@ -369,7 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ReleaseDetailsControl";
-            this.Size = new System.Drawing.Size(625, 473);
+            this.Size = new System.Drawing.Size(467, 361);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
