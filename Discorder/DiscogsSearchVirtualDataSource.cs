@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Discorder
 {
-    class DiscogsSearchVirtualDataSource:BrightIdeasSoftware.IVirtualListDataSource
+    class DiscogsSearchVirtualDataSource : BrightIdeasSoftware.IVirtualListDataSource
     {
         #region IVirtualListDataSource Members
 
@@ -27,7 +27,7 @@ namespace Discorder
         /// <returns></returns>
         private int IndexToPageNum(int index)
         {
-            int x = ((index) / this._numPerPage)+1;
+            int x = ((index) / this._numPerPage) + 1;
             return x;
         }
 
@@ -39,9 +39,10 @@ namespace Discorder
         /// <returns></returns>
         private int IndexToPageIndex(int index)
         {
-            int itemNum = index + 1;
-            int pageCount = itemNum / this._numPerPage;
-            int x = itemNum - pageCount * this._numPerPage - 1;
+            int pageCount = index / this._numPerPage;
+            int x = index - pageCount * this._numPerPage;
+
+            if (x < 0) System.Windows.Forms.MessageBox.Show("blah");
             return x;
         }
 
@@ -70,12 +71,22 @@ namespace Discorder
 
         public object GetNthObject(int n)
         {
-            SearchResultList result = this._searchResultListCache[this.IndexToPageNum(n)];
-            return result.Results[this.IndexToPageIndex(n)];
+            int pagenum = this.IndexToPageNum(n);
+
+            if (!this._searchResultListCache.Keys.Contains<int>(pagenum))
+            {
+                CachePage(pagenum);
+            }
+
+
+            SearchResultList result = this._searchResultListCache[pagenum];
+            int Resultindx = this.IndexToPageIndex(n);
+            return result.Results[Resultindx];
 
 
 
-         
+
+
         }
 
         public int GetObjectCount()
@@ -100,7 +111,7 @@ namespace Discorder
             for (int i = first; i <= last; i++)
             {
                 pageNum = this.IndexToPageNum(i);
-                if(!requiredPages.Contains(pageNum)) requiredPages.Add(pageNum);
+                if (!requiredPages.Contains(pageNum)) requiredPages.Add(pageNum);
             }
 
 

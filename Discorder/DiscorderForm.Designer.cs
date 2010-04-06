@@ -41,6 +41,7 @@
             this.searchResultListView = new BrightIdeasSoftware.VirtualObjectListView();
             this.resultTitleCOl = new BrightIdeasSoftware.OLVColumn();
             this.resultSumCol = new BrightIdeasSoftware.OLVColumn();
+            this.numCol = new BrightIdeasSoftware.OLVColumn();
             this.searchResultImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.userControl11 = new Discorder.UserControl1();
@@ -184,9 +185,11 @@
             // 
             this.searchResultListView.AllColumns.Add(this.resultTitleCOl);
             this.searchResultListView.AllColumns.Add(this.resultSumCol);
+            this.searchResultListView.AllColumns.Add(this.numCol);
             this.searchResultListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.resultTitleCOl,
-            this.resultSumCol});
+            this.resultSumCol,
+            this.numCol});
             this.tableLayoutPanel2.SetColumnSpan(this.searchResultListView, 3);
             this.searchResultListView.Cursor = System.Windows.Forms.Cursors.Default;
             this.searchResultListView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -203,11 +206,11 @@
             this.searchResultListView.UseCompatibleStateImageBehavior = false;
             this.searchResultListView.View = System.Windows.Forms.View.Details;
             this.searchResultListView.VirtualMode = true;
-            
             // 
             // resultTitleCOl
             // 
             this.resultTitleCOl.AspectName = "title";
+            this.resultTitleCOl.DisplayIndex = 1;
             this.resultTitleCOl.HeaderFont = null;
             this.resultTitleCOl.Text = "Title";
             this.resultTitleCOl.Width = 200;
@@ -216,9 +219,19 @@
             // 
             this.resultSumCol.AspectName = "summary";
             this.resultSumCol.AutoCompleteEditor = false;
+            this.resultSumCol.DisplayIndex = 2;
             this.resultSumCol.FillsFreeSpace = true;
             this.resultSumCol.HeaderFont = null;
             this.resultSumCol.Text = "Summary";
+            // 
+            // numCol
+            // 
+            this.numCol.AspectName = "num";
+            this.numCol.DisplayIndex = 0;
+            this.numCol.HeaderFont = null;
+            this.numCol.MaximumWidth = 60;
+            this.numCol.MinimumWidth = 60;
+            this.numCol.Text = "#";
             // 
             // searchResultImageList
             // 
@@ -341,6 +354,7 @@
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ImageList searchResultImageList;
+        private BrightIdeasSoftware.OLVColumn numCol;
     }
 }
 
