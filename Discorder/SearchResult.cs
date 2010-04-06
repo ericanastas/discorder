@@ -14,7 +14,6 @@ namespace Discorder
         private string uriField;
         private string summaryField;
         private int numField;
-        private bool numFieldSpecified;
         private SearchResultType typeField;
 
         public string title
@@ -79,21 +78,6 @@ namespace Discorder
                 this.numField = value;
             }
         }
-
-
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool numSpecified
-        {
-            get
-            {
-                return this.numFieldSpecified;
-            }
-            set
-            {
-                this.numFieldSpecified = value;
-            }
-        }
-
 
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public SearchResultType type

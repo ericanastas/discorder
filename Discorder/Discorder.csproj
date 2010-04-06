@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="ArtistDetails.cs" />
     <Compile Include="ArtistInfo.cs" />
+    <Compile Include="DiscogsSearchVirtualDataSource.cs" />
     <Compile Include="ReleaseDetailsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,7 +125,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\record150.png" />
+    <None Include="Resources\missingReleaseImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelIcon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artistIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\releaseIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

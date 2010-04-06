@@ -14,22 +14,40 @@ namespace Discorder
         public DiscorderForm()
         {
             InitializeComponent();
+
+            searchTypeComboBox.SelectedIndex = 0;
+
+
+            this.resultTitleCOl.ImageGetter = new BrightIdeasSoftware.ImageGetterDelegate(this.GetSearchResultIcon);
+        }
+
+
+        private object GetSearchResultIcon(object o)
+        {
+            SearchResult s = (SearchResult)o;
+
+            int value = -1;
+
+            switch (s.type)
+            {
+                case SearchResultType.artist:
+                    value = 2;
+                    break;
+                case SearchResultType.label:
+                    value = 1;
+                    break;
+                case SearchResultType.release:
+                    value = 0;
+                    break;
+            }
+
+            return value;
+
         }
 
  
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
 
-            
-          
-
-           
-
-
-            
-        }
 
         private void tESTToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -43,26 +61,71 @@ namespace Discorder
 
         private void collapseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (splitContainer1.Panel2Collapsed)
+            if (leftRightSplitContainer.Panel2Collapsed)
             {
-                splitContainer1.Panel2Collapsed = false;
+                leftRightSplitContainer.Panel2Collapsed = false;
             }
             else
             {
-                splitContainer1.Panel2Collapsed = true;
+                leftRightSplitContainer.Panel2Collapsed = true;
             }
         }
 
         private void collapseToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (splitContainer1.Panel1Collapsed)
+            if (leftRightSplitContainer.Panel1Collapsed)
             {
-                splitContainer1.Panel1Collapsed = false;
+                leftRightSplitContainer.Panel1Collapsed = false;
             }
             else
             {
-                splitContainer1.Panel1Collapsed = true;
+                leftRightSplitContainer.Panel1Collapsed = true;
             }
         }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+
+            SearchType type = SearchType.all;
+
+            switch (searchTypeComboBox.SelectedIndex)
+            {
+                case 0:
+                    type = SearchType.all;
+                    break;
+                case 1:
+                    type = SearchType.artists;
+                    break;
+                case 2:
+                    type = SearchType.labels;
+                    break;
+                case 3:
+                    type = SearchType.releases;
+                    break;
+                case 4:
+                    type = SearchType.catno;
+                    break;
+            }
+
+            if (!String.IsNullOrEmpty(this.searchTextBox.Text))
+            {
+                DiscogsSearchVirtualDataSource dSource = new DiscogsSearchVirtualDataSource(type, this.searchTextBox.Text);
+                searchResultListView.DataSource = dSource;
+            }
+            else
+            {
+                searchResultListView.DataSource = null;
+            
+            }
+
+                  
+
+        }
+
     }
 }
