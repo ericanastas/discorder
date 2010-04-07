@@ -66,18 +66,57 @@ namespace Discorder
     [System.SerializableAttribute()]
     public enum FormatName
     {
-        [System.Xml.Serialization.XmlEnumAttribute("Box Set")]
-        BoxSet,
-        Cassette,
+        Vinyl,
+        Acetate,
+        [System.Xml.Serialization.XmlEnumAttribute("Flexi-disc")]
+        Flexidisc,
+        [System.Xml.Serialization.XmlEnumAttribute("Lathe Cut")]
+        LatheCut,
+        Shellac,
+        Cylinder,
         CD,
         CDr,
-        File,
-        Vinyl,
+        CDV,
         DVD,
-        VHS,
         DVDr,
-        Shellac,
-        Acetate
+        [System.Xml.Serialization.XmlEnumAttribute("HD DVD")]
+        HDDVD,
+        [System.Xml.Serialization.XmlEnumAttribute("HD DVD-R")]
+        HDDVDR,
+        [System.Xml.Serialization.XmlEnumAttribute("Blu-ray")]
+        Bluray,
+        [System.Xml.Serialization.XmlEnumAttribute("Blu-ray-R")]
+        BlurayR,
+        [System.Xml.Serialization.XmlEnumAttribute("8-Track Cartridge")]
+        EightTrackCartridge,
+        Cassette,
+        DAT,
+        DCC,
+        Microcassette,
+        [System.Xml.Serialization.XmlEnumAttribute("Reel-To-Reel")]
+        ReelToReel,
+        Betamax,
+        VHS,
+        [System.Xml.Serialization.XmlEnumAttribute("Video 2000")]
+        Video2000,
+        Laserdisc,
+        SelectaVision,
+        Minidisc,
+        MVD,
+        UMD,
+        Datassette,
+        [System.Xml.Serialization.XmlEnumAttribute("Floppy Disk")]
+        FloppyDisk,
+        File,
+        [System.Xml.Serialization.XmlEnumAttribute("Memory Stick")]
+        MemoryStick,
+        Hybrid,
+
+        [System.Xml.Serialization.XmlEnumAttribute("All Media")]
+        AllMedia,
+
+        [System.Xml.Serialization.XmlEnumAttribute("BoxSet")]
+        BoxSet
     }
 
     [System.SerializableAttribute()]

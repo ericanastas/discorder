@@ -13,7 +13,7 @@ namespace Discorder
         private int qtyField;
 
         [System.Xml.Serialization.XmlArrayAttribute(ElementName = "descriptions")]
-        [System.Xml.Serialization.XmlArrayItemAttribute("description")]        
+        [System.Xml.Serialization.XmlArrayItemAttribute("description")]
         public string[] Descriptions
         {
             get
