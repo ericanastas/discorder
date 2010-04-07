@@ -1,6 +1,6 @@
 ﻿namespace Discorder
 {
-    partial class UserControl1
+    partial class ReleaseDetailsControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReleaseDetailsControl));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.titleLbl = new System.Windows.Forms.Label();
@@ -239,6 +239,7 @@
             // objectListView1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.objectListView1, 2);
+            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.objectListView1.Location = new System.Drawing.Point(68, 213);
             this.objectListView1.Name = "objectListView1";
@@ -247,12 +248,12 @@
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
             // 
-            // UserControl1
+            // ReleaseDetailsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "UserControl1";
+            this.Name = "ReleaseDetailsControl";
             this.Size = new System.Drawing.Size(461, 438);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

@@ -44,7 +44,7 @@
             this.numCol = new BrightIdeasSoftware.OLVColumn();
             this.searchResultImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.userControl11 = new Discorder.UserControl1();
+            this.userControl11 = new Discorder.ReleaseDetailsControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -350,7 +350,7 @@
         private BrightIdeasSoftware.OLVColumn resultSumCol;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem1;
-        private UserControl1 userControl11;
+        private ReleaseDetailsControl userControl11;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ImageList searchResultImageList;

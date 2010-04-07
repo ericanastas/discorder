@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Discorder
 {
-    public partial class UserControl1 : UserControl
+    public partial class ReleaseDetailsControl : UserControl
     {
-        public UserControl1()
+        public ReleaseDetailsControl()
         {
             InitializeComponent();
         }
