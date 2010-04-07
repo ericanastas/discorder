@@ -70,7 +70,6 @@ namespace Discorder
             wc.Headers.Add(HttpRequestHeader.AcceptEncoding, "gzip");
             wc.Proxy = null;
 
-
             using (GZipStream stream = new GZipStream(
                wc.OpenRead(uri), CompressionMode.Decompress, false))
             {

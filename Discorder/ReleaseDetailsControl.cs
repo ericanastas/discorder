@@ -175,7 +175,8 @@ namespace Discorder
 
 
                 //tracklistOLV
-                //tracksOLV.SetObjects(value.TrackList);
+                tracksOLV.SetObjects(value.TrackList);
+                tracksOLV.Sort(positionCol, SortOrder.Ascending);
 
 
 

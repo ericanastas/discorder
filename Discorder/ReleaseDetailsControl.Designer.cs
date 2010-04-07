@@ -38,7 +38,6 @@
             this.notesTextBox = new System.Windows.Forms.TextBox();
             this.imagesListBox = new System.Windows.Forms.ListBox();
             this.releasePicBox = new System.Windows.Forms.PictureBox();
-            this.tracksOLV = new BrightIdeasSoftware.ObjectListView();
             this.labelLbl = new System.Windows.Forms.Label();
             this.releaseLbl = new System.Windows.Forms.Label();
             this.countryLbl = new System.Windows.Forms.Label();
@@ -49,6 +48,10 @@
             this.formatsLbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.tracksOLV = new BrightIdeasSoftware.ObjectListView();
+            this.positionCol = new BrightIdeasSoftware.OLVColumn();
+            this.trackTitleCol = new BrightIdeasSoftware.OLVColumn();
+            this.durationCol = new BrightIdeasSoftware.OLVColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.releasePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tracksOLV)).BeginInit();
@@ -68,7 +71,6 @@
             this.tableLayoutPanel1.Controls.Add(this.notesTextBox, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.imagesListBox, 2, 7);
             this.tableLayoutPanel1.Controls.Add(this.releasePicBox, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tracksOLV, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.labelLbl, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.releaseLbl, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.countryLbl, 1, 3);
@@ -79,6 +81,7 @@
             this.tableLayoutPanel1.Controls.Add(this.formatsLbl, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.tracksOLV, 1, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -204,18 +207,6 @@
             this.releasePicBox.TabIndex = 25;
             this.releasePicBox.TabStop = false;
             // 
-            // tracksOLV
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.tracksOLV, 2);
-            this.tracksOLV.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tracksOLV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tracksOLV.Location = new System.Drawing.Point(68, 213);
-            this.tracksOLV.Name = "tracksOLV";
-            this.tracksOLV.Size = new System.Drawing.Size(623, 264);
-            this.tracksOLV.TabIndex = 26;
-            this.tracksOLV.UseCompatibleStateImageBehavior = false;
-            this.tracksOLV.View = System.Windows.Forms.View.Details;
-            // 
             // labelLbl
             // 
             this.labelLbl.AutoEllipsis = true;
@@ -326,6 +317,58 @@
             this.label9.Text = "Formats:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // tracksOLV
+            // 
+            this.tracksOLV.AllColumns.Add(this.positionCol);
+            this.tracksOLV.AllColumns.Add(this.trackTitleCol);
+            this.tracksOLV.AllColumns.Add(this.durationCol);
+            this.tracksOLV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tracksOLV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.positionCol,
+            this.trackTitleCol,
+            this.durationCol});
+            this.tableLayoutPanel1.SetColumnSpan(this.tracksOLV, 2);
+            this.tracksOLV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tracksOLV.FullRowSelect = true;
+            this.tracksOLV.GridLines = true;
+            this.tracksOLV.HideSelection = false;
+            this.tracksOLV.IsSearchOnSortColumn = false;
+            this.tracksOLV.Location = new System.Drawing.Point(68, 213);
+            this.tracksOLV.MultiSelect = false;
+            this.tracksOLV.Name = "tracksOLV";
+            this.tracksOLV.SelectColumnsMenuStaysOpen = false;
+            this.tracksOLV.SelectColumnsOnRightClick = false;
+            this.tracksOLV.ShowGroups = false;
+            this.tracksOLV.ShowSortIndicators = false;
+            this.tracksOLV.Size = new System.Drawing.Size(623, 264);
+            this.tracksOLV.TabIndex = 33;
+            this.tracksOLV.UseCompatibleStateImageBehavior = false;
+            this.tracksOLV.View = System.Windows.Forms.View.Details;
+            // 
+            // positionCol
+            // 
+            this.positionCol.AspectName = "position";
+            this.positionCol.HeaderFont = null;
+            this.positionCol.MaximumWidth = 60;
+            this.positionCol.MinimumWidth = 60;
+            this.positionCol.Text = "#";
+            // 
+            // trackTitleCol
+            // 
+            this.trackTitleCol.AspectName = "title";
+            this.trackTitleCol.FillsFreeSpace = true;
+            this.trackTitleCol.HeaderFont = null;
+            this.trackTitleCol.Text = "Title";
+            // 
+            // durationCol
+            // 
+            this.durationCol.AspectName = "duration";
+            this.durationCol.HeaderFont = null;
+            this.durationCol.Text = "Time";
+            this.durationCol.Width = 80;
+            // 
             // ReleaseDetailsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,12 +400,15 @@
         private System.Windows.Forms.ListBox imagesListBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox releasePicBox;
-        private BrightIdeasSoftware.ObjectListView tracksOLV;
         private System.Windows.Forms.Label labelLbl;
         private System.Windows.Forms.Label releaseLbl;
         private System.Windows.Forms.Label countryLbl;
         private System.Windows.Forms.Label genresLbl;
         private System.Windows.Forms.Label stylesLbl;
         private System.Windows.Forms.Label formatsLbl;
+        private BrightIdeasSoftware.ObjectListView tracksOLV;
+        private BrightIdeasSoftware.OLVColumn trackTitleCol;
+        private BrightIdeasSoftware.OLVColumn positionCol;
+        private BrightIdeasSoftware.OLVColumn durationCol;
     }
 }
