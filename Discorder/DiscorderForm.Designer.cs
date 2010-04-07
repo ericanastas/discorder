@@ -206,6 +206,7 @@
             this.searchResultListView.UseCompatibleStateImageBehavior = false;
             this.searchResultListView.View = System.Windows.Forms.View.Details;
             this.searchResultListView.VirtualMode = true;
+            this.searchResultListView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.searchResultListView_MouseDoubleClick);
             this.searchResultListView.SelectionChanged += new System.EventHandler(this.searchResultListView_SelectionChanged);
             // 
             // resultTitleCOl

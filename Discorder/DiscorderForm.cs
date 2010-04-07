@@ -45,7 +45,7 @@ namespace Discorder
 
         }
 
- 
+
 
 
 
@@ -120,10 +120,10 @@ namespace Discorder
             else
             {
                 searchResultListView.DataSource = null;
-            
+
             }
 
-                  
+
 
         }
 
@@ -137,19 +137,58 @@ namespace Discorder
             if (selectedResult.type == SearchResultType.release)
             {
                 string uri = selectedResult.uri;
-
                 char[] delim = new char[1];
                 delim[0] = '/';
                 string[] splitItems = uri.Split(delim);
                 int releaseNum = System.Convert.ToInt32(splitItems[splitItems.Length - 1]);
                 ReleaseDetails rDetails = Discogs.GetRelease(releaseNum);
-
                 releaseDetailsControl.Release = rDetails;
             }
             else
             {
                 releaseDetailsControl.Release = null;
             }
+        }
+
+        private void searchResultListView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (searchResultListView.SelectedItem == null) return;
+
+            SearchResult selectedResult = (SearchResult)searchResultListView.SelectedObject;
+
+
+            string uri = selectedResult.uri;
+
+            switch (selectedResult.type)
+            {
+                case SearchResultType.artist:
+
+
+                    char[] delim = new char[1];
+                    delim[0] = '/';
+                    string[] splitItems = uri.Split(delim);
+                    string escapedArtistName = splitItems[splitItems.Length - 1];
+                    string unescapedArtistName = System.Uri.UnescapeDataString(escapedArtistName);
+                    unescapedArtistName = unescapedArtistName.Replace('+', ' ');
+                    ArtistDetails rDetails = Discogs.GetArtist(unescapedArtistName);
+
+                    foreach(ReleaseInfo rInfo in rDetails.releases)
+                    {
+
+                        string s = rInfo.title;
+                    
+                    
+                    }
+          
+                
+
+                    break;
+                case SearchResultType.label:
+                    break;
+                default:
+                    break;
+            }
+
         }
 
     }
