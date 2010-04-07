@@ -115,7 +115,7 @@ namespace Discorder
         [System.Xml.Serialization.XmlEnumAttribute("All Media")]
         AllMedia,
 
-        [System.Xml.Serialization.XmlEnumAttribute("BoxSet")]
+        [System.Xml.Serialization.XmlEnumAttribute("Box Set")]
         BoxSet
     }
 
