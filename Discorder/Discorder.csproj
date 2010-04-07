@@ -58,7 +58,9 @@
   <ItemGroup>
     <Compile Include="ArtistDetails.cs" />
     <Compile Include="ArtistInfo.cs" />
+    <Compile Include="DiscogsException.cs" />
     <Compile Include="DiscogsSearchVirtualDataSource.cs" />
+    <Compile Include="Error.cs" />
     <Compile Include="ReleaseInfo.cs" />
     <Compile Include="LabelDetails.cs" />
     <Compile Include="ReleaseDetails.cs" />
@@ -116,6 +118,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\missingReleaseImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelIcon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artistIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\releaseIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -25,7 +25,7 @@ namespace Discorder
 
         private ReleaseInfo[] releasesField;
 
-        /// <remarks/>
+        
         [System.Xml.Serialization.XmlArrayItemAttribute("image", IsNullable = false)]
         public ImageInfo[] images
         {
@@ -39,7 +39,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         public string name
         {
             get
@@ -52,7 +52,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         public string contactinfo
         {
             get
@@ -65,7 +65,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         public string profile
         {
             get
@@ -78,7 +78,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         public string parentLabel
         {
             get
@@ -91,7 +91,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         [System.Xml.Serialization.XmlArrayItemAttribute("url", IsNullable = false)]
         public string[] urls
         {
@@ -105,7 +105,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         [System.Xml.Serialization.XmlArrayItemAttribute("label", IsNullable = false)]
         public string[] sublabels
         {
@@ -119,7 +119,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         [System.Xml.Serialization.XmlArrayItemAttribute("release", IsNullable = false)]
         public ReleaseInfo[] releases
         {

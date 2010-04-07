@@ -15,14 +15,35 @@ namespace Discorder
         {
             InitializeComponent();
 
-            
+            searchTypeComboBox.SelectedIndex = 0;
 
 
-            
+            this.resultTitleCOl.ImageGetter = new BrightIdeasSoftware.ImageGetterDelegate(this.GetSearchResultIcon);
         }
 
 
- 
+        private object GetSearchResultIcon(object o)
+        {
+            SearchResult s = (SearchResult)o;
+
+            int value = -1;
+
+            switch (s.type)
+            {
+                case SearchResultType.artist:
+                    value = 2;
+                    break;
+                case SearchResultType.label:
+                    value = 1;
+                    break;
+                case SearchResultType.release:
+                    value = 0;
+                    break;
+            }
+
+            return value;
+
+        }
 
 
 
@@ -33,8 +54,8 @@ namespace Discorder
             SearchResultList exactList;
             SearchResultList results;
             Discogs.Search("It Began In Afrika", SearchType.all, 1, out results, out exactList);
-            ArtistDetails a = Discogs.GetArtist("Aphex Twin");
-            LabelDetails l = Discogs.GetLabel("Tidy");
+            ArtistDetails a = Discogs.GetArtist("Aphex Twin", false);
+            LabelDetails l = Discogs.GetLabel("Tidy", false);
             ReleaseDetails r = Discogs.GetRelease(95682);
         }
 
@@ -69,9 +90,31 @@ namespace Discorder
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+
+            SearchType type = SearchType.all;
+
+            switch (searchTypeComboBox.SelectedIndex)
+            {
+                case 0:
+                    type = SearchType.all;
+                    break;
+                case 1:
+                    type = SearchType.artists;
+                    break;
+                case 2:
+                    type = SearchType.labels;
+                    break;
+                case 3:
+                    type = SearchType.releases;
+                    break;
+                case 4:
+                    type = SearchType.catno;
+                    break;
+            }
+
             if (!String.IsNullOrEmpty(this.searchTextBox.Text))
             {
-                DiscogsSearchVirtualDataSource dSource = new DiscogsSearchVirtualDataSource(SearchType.releases, this.searchTextBox.Text);
+                DiscogsSearchVirtualDataSource dSource = new DiscogsSearchVirtualDataSource(type, this.searchTextBox.Text);
                 searchResultListView.DataSource = dSource;
             }
             else
@@ -107,6 +150,54 @@ namespace Discorder
             }
         }
 
+        private void searchResultListView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (searchResultListView.SelectedItem == null) return;
+
+            SearchResult selectedResult = (SearchResult)searchResultListView.SelectedObject;
+
+
+            string uri = selectedResult.uri;
+            char[] delim = new char[1];
+            delim[0] = '/';
+            string[] splitItems = uri.Split(delim);
+
+
+            switch (selectedResult.type)
+            {
+                
+
+                case SearchResultType.artist:
+
+                    
+                    
+                    string escapedArtistName = splitItems[splitItems.Length - 1];
+                    ArtistDetails aDetails = Discogs.GetArtist(escapedArtistName, true);
+
+                    foreach(ReleaseInfo rInfo in aDetails.releases)
+                    {
+
+                        string s = rInfo.Title;
+                                        
+                    }
+
+                    break;
+
+                case SearchResultType.label:
+                    string escapedLabelName = splitItems[splitItems.Length - 1];
+                    LabelDetails lDetails = Discogs.GetLabel(escapedLabelName, true);
+
+                    foreach (ReleaseInfo rInfo in lDetails.releases)
+                    {
+                        string s = rInfo.Title;
+                    }
+
+                    break;
+                default:
+                    break;
+            }
+
+        }
 
     }
 }

@@ -28,6 +28,14 @@ namespace Discorder
             }
         }
 
+
+        [System.Xml.Serialization.XmlElementAttribute("error", typeof(Error))]
+        public Error Error
+        {
+            get;
+            set;
+        }
+
         [System.Xml.Serialization.XmlElementAttribute("searchresults", typeof(SearchResultList))]
         public SearchResultList SearchResults
         {

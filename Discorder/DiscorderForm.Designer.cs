@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiscorderForm));
             this.leftRightSplitContainer = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -35,10 +37,12 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.searchTypeComboBox = new System.Windows.Forms.ComboBox();
             this.searchResultListView = new BrightIdeasSoftware.VirtualObjectListView();
             this.resultTitleCOl = new BrightIdeasSoftware.OLVColumn();
             this.resultSumCol = new BrightIdeasSoftware.OLVColumn();
             this.numCol = new BrightIdeasSoftware.OLVColumn();
+            this.searchResultImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.releaseDetailsControl = new Discorder.ReleaseDetailsControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -124,11 +128,13 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel2.Controls.Add(this.searchTextBox, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.searchButton, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.searchButton, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.searchTypeComboBox, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.searchResultListView, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
@@ -136,6 +142,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(512, 256);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -144,19 +151,35 @@
             this.searchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTextBox.Location = new System.Drawing.Point(3, 3);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(406, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(376, 20);
             this.searchTextBox.TabIndex = 0;
             // 
             // searchButton
             // 
             this.searchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchButton.Location = new System.Drawing.Point(415, 3);
+            this.searchButton.Location = new System.Drawing.Point(455, 3);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(94, 24);
+            this.searchButton.Size = new System.Drawing.Size(54, 24);
             this.searchButton.TabIndex = 1;
-            this.searchButton.Text = "Find Releases";
+            this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // searchTypeComboBox
+            // 
+            this.searchTypeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchTypeComboBox.FormattingEnabled = true;
+            this.searchTypeComboBox.Items.AddRange(new object[] {
+            "All",
+            "Artist",
+            "Label",
+            "Release",
+            "Catalog Numbers"});
+            this.searchTypeComboBox.Location = new System.Drawing.Point(385, 3);
+            this.searchTypeComboBox.Name = "searchTypeComboBox";
+            this.searchTypeComboBox.Size = new System.Drawing.Size(64, 21);
+            this.searchTypeComboBox.TabIndex = 2;
             // 
             // searchResultListView
             // 
@@ -167,7 +190,7 @@
             this.resultTitleCOl,
             this.resultSumCol,
             this.numCol});
-            this.tableLayoutPanel2.SetColumnSpan(this.searchResultListView, 2);
+            this.tableLayoutPanel2.SetColumnSpan(this.searchResultListView, 3);
             this.searchResultListView.Cursor = System.Windows.Forms.Cursors.Default;
             this.searchResultListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchResultListView.FullRowSelect = true;
@@ -178,10 +201,12 @@
             this.searchResultListView.RowHeight = 24;
             this.searchResultListView.ShowGroups = false;
             this.searchResultListView.Size = new System.Drawing.Size(506, 220);
+            this.searchResultListView.SmallImageList = this.searchResultImageList;
             this.searchResultListView.TabIndex = 3;
             this.searchResultListView.UseCompatibleStateImageBehavior = false;
             this.searchResultListView.View = System.Windows.Forms.View.Details;
             this.searchResultListView.VirtualMode = true;
+            this.searchResultListView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.searchResultListView_MouseDoubleClick);
             this.searchResultListView.SelectionChanged += new System.EventHandler(this.searchResultListView_SelectionChanged);
             // 
             // resultTitleCOl
@@ -209,6 +234,14 @@
             this.numCol.MaximumWidth = 60;
             this.numCol.MinimumWidth = 60;
             this.numCol.Text = "#";
+            // 
+            // searchResultImageList
+            // 
+            this.searchResultImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("searchResultImageList.ImageStream")));
+            this.searchResultImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.searchResultImageList.Images.SetKeyName(0, "releaseIcon.png");
+            this.searchResultImageList.Images.SetKeyName(1, "labelIcon.gif");
+            this.searchResultImageList.Images.SetKeyName(2, "artistIcon.png");
             // 
             // groupBox3
             // 
@@ -315,6 +348,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.ComboBox searchTypeComboBox;
         private BrightIdeasSoftware.VirtualObjectListView searchResultListView;
         private BrightIdeasSoftware.OLVColumn resultTitleCOl;
         private BrightIdeasSoftware.OLVColumn resultSumCol;
@@ -323,6 +357,7 @@
         private ReleaseDetailsControl releaseDetailsControl;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ImageList searchResultImageList;
         private BrightIdeasSoftware.OLVColumn numCol;
     }
 }

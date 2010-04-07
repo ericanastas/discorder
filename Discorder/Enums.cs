@@ -11,6 +11,7 @@ namespace Discorder
     {
         ok,
         error,
+        fail,
     }
 
     [System.SerializableAttribute()]
@@ -53,14 +54,9 @@ namespace Discorder
     [System.SerializableAttribute()]
     public enum SearchResultType
     {
-
         artist,
-
         label,
-
         release
-
-
     }
 
     [System.SerializableAttribute()]

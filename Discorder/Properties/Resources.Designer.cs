@@ -60,9 +60,30 @@ namespace Discorder.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap artistIcon {
+            get {
+                object obj = ResourceManager.GetObject("artistIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap labelIcon {
+            get {
+                object obj = ResourceManager.GetObject("labelIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap missingReleaseImage {
             get {
                 object obj = ResourceManager.GetObject("missingReleaseImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap releaseIcon {
+            get {
+                object obj = ResourceManager.GetObject("releaseIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

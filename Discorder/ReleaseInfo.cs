@@ -10,35 +10,19 @@ namespace Discorder
     {
 
         private string catnoField;
-
         private string artistField;
-
         private string titleField;
-
         private string trackinfoField;
-
         private string formatField;
-
         private string labelField;
-
         private int yearField;
-
-        private bool yearFieldSpecified;
-
         private int idField;
-
-        private bool idFieldSpecified;
-
         private ReleaseStatus statusField;
-
-        private bool statusFieldSpecified;
-
         private ReleaseType typeField;
 
-        private bool typeFieldSpecified;
 
-        /// <remarks/>
-        public string catno
+        [System.Xml.Serialization.XmlElementAttribute("catno")]
+        public string CatalogNumber
         {
             get
             {
@@ -50,8 +34,8 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        public string artist
+        [System.Xml.Serialization.XmlElementAttribute("artist")]
+        public string Artist
         {
             get
             {
@@ -63,8 +47,9 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        public string title
+
+        [System.Xml.Serialization.XmlElementAttribute("title")]
+        public string Title
         {
             get
             {
@@ -76,8 +61,8 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        public string trackinfo
+        [System.Xml.Serialization.XmlElementAttribute("trackinfo")]
+        public string TrackInfo
         {
             get
             {
@@ -89,8 +74,8 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        public string format
+        [System.Xml.Serialization.XmlElementAttribute("format")]
+        public string Format
         {
             get
             {
@@ -102,8 +87,8 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        public string label
+        [System.Xml.Serialization.XmlElementAttribute("label")]
+        public string Label
         {
             get
             {
@@ -115,8 +100,9 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        public int year
+
+        [System.Xml.Serialization.XmlElementAttribute("year")]
+        public int Year
         {
             get
             {
@@ -128,21 +114,9 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool yearSpecified
-        {
-            get
-            {
-                return this.yearFieldSpecified;
-            }
-            set
-            {
-                this.yearFieldSpecified = value;
-            }
-        }
 
-        /// <remarks/>
+
+        
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public int id
         {
@@ -156,21 +130,9 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idSpecified
-        {
-            get
-            {
-                return this.idFieldSpecified;
-            }
-            set
-            {
-                this.idFieldSpecified = value;
-            }
-        }
 
-        /// <remarks/>
+
+        
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ReleaseStatus status
         {
@@ -184,21 +146,9 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool statusSpecified
-        {
-            get
-            {
-                return this.statusFieldSpecified;
-            }
-            set
-            {
-                this.statusFieldSpecified = value;
-            }
-        }
 
-        /// <remarks/>
+
+        
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ReleaseType type
         {
@@ -212,18 +162,6 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool typeSpecified
-        {
-            get
-            {
-                return this.typeFieldSpecified;
-            }
-            set
-            {
-                this.typeFieldSpecified = value;
-            }
-        }
+
     }
 }

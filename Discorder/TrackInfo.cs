@@ -11,16 +11,11 @@ namespace Discorder
     {
 
         private string positionField;
-
         private ArtistInfo[] artistsField;
-
         private string titleField;
-
         private ArtistInfo[] extraartistsField;
-
         private string durationField;
-
-        /// <remarks/>
+        
         public string position
         {
             get
@@ -33,7 +28,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         [System.Xml.Serialization.XmlArrayItemAttribute("artist", IsNullable = false)]
         public ArtistInfo[] artists
         {
@@ -47,7 +42,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         public string title
         {
             get
@@ -60,7 +55,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         [System.Xml.Serialization.XmlArrayItemAttribute("artist", IsNullable = false)]
         public ArtistInfo[] extraartists
         {
@@ -74,7 +69,7 @@ namespace Discorder
             }
         }
 
-        /// <remarks/>
+        
         public string duration
         {
             get

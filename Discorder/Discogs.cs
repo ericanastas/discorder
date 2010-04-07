@@ -30,32 +30,48 @@ namespace Discorder
         }
 
 
-        public static Discorder.ArtistDetails GetArtist(string artistName)
+        public static Discorder.ArtistDetails GetArtist(string artistName, bool nameIsEscaped)
         {
             UriBuilder builder = new UriBuilder();
             builder.Host = "www.discogs.com";
-            builder.Path = @"artist/" + System.Uri.EscapeDataString(artistName);
+            if (!nameIsEscaped)
+            {
+                builder.Path = @"artist/" + System.Uri.EscapeDataString(artistName);
+            }
+            else
+            {
+                builder.Path = @"artist/" + artistName;
+            }
             builder.Query = "f=xml&apikey=" + ApiKey;
             Response r = GetResponse(builder.Uri.ToString());
             return r.Artist;
         }
 
-        public static Discorder.LabelDetails GetLabel(string labelName)
+        public static Discorder.LabelDetails GetLabel(string labelName, bool nameIsEscaped)
         {
             UriBuilder builder = new UriBuilder();
             builder.Host = "www.discogs.com";
-            builder.Path = @"label/" + System.Uri.EscapeDataString(labelName);
+
+            if (!nameIsEscaped)
+            {
+                builder.Path = @"label/" + System.Uri.EscapeDataString(labelName);
+            }
+            else
+            {
+                builder.Path = @"label/" + labelName;
+            }
+
             builder.Query = "f=xml&apikey=" + ApiKey;
             Response r = GetResponse(builder.Uri.ToString());
             return r.Label;
         }
 
-        public static void Search(string query,SearchType type, int pageNumber, out SearchResultList searchResults, out SearchResultList exactResults)
+        public static void Search(string query, SearchType type, int pageNumber, out SearchResultList searchResults, out SearchResultList exactResults)
         {
             UriBuilder uriBuilder = new UriBuilder();
             uriBuilder.Host = "www.discogs.com";
             uriBuilder.Path = "search";
-            string queryEncoded = "type="+Enum.GetName(typeof(SearchType),type)+"&q="+System.Uri.EscapeDataString(query) + "&f=xml&api_key=" + ApiKey+"&page="+pageNumber.ToString();
+            string queryEncoded = "type=" + Enum.GetName(typeof(SearchType), type) + "&q=" + System.Uri.EscapeDataString(query) + "&f=xml&api_key=" + ApiKey + "&page=" + pageNumber.ToString();
 
             uriBuilder.Query = queryEncoded;
             Response r = GetResponse(uriBuilder.Uri.ToString());
@@ -77,10 +93,30 @@ namespace Discorder
                 {
                     System.Xml.Serialization.XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(Discorder.Response));
 
-                
+
+                    try
+                    {
                         Discorder.Response response = (Discorder.Response)xmlSerializer.Deserialize(reader);
+
+                        if (response.stat != ResponseStatus.ok)
+                        {
+                            if (response.Error != null)
+                            {
+                                throw new DiscogsException(response.Error.Message);
+                            }
+                            else
+                            {
+                                throw new DiscogsException("<No Message>");
+                            }
+                        }
+
                         return response;
-              
+                    }
+                    catch (InvalidDataException exp)
+                    {
+                        System.Windows.Forms.MessageBox.Show("InvalidDataException:" + exp.Message);
+                        throw;
+                    }
                 }
             }
 
