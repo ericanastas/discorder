@@ -239,6 +239,7 @@
             // objectListView1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.objectListView1, 2);
+            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.objectListView1.Location = new System.Drawing.Point(68, 213);
             this.objectListView1.Name = "objectListView1";
