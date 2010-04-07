@@ -44,7 +44,7 @@
             this.numCol = new BrightIdeasSoftware.OLVColumn();
             this.searchResultImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.userControl11 = new Discorder.ReleaseDetailsControl();
+            this.releaseDetailsControl = new Discorder.ReleaseDetailsControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -206,6 +206,7 @@
             this.searchResultListView.UseCompatibleStateImageBehavior = false;
             this.searchResultListView.View = System.Windows.Forms.View.Details;
             this.searchResultListView.VirtualMode = true;
+            this.searchResultListView.SelectionChanged += new System.EventHandler(this.searchResultListView_SelectionChanged);
             // 
             // resultTitleCOl
             // 
@@ -243,7 +244,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.userControl11);
+            this.groupBox3.Controls.Add(this.releaseDetailsControl);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
@@ -252,13 +253,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Release Details";
             // 
-            // userControl11
+            // releaseDetailsControl
             // 
-            this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl11.Location = new System.Drawing.Point(3, 16);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(512, 336);
-            this.userControl11.TabIndex = 0;
+            this.releaseDetailsControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.releaseDetailsControl.Location = new System.Drawing.Point(3, 16);
+            this.releaseDetailsControl.MinimumSize = new System.Drawing.Size(350, 300);
+            this.releaseDetailsControl.Name = "releaseDetailsControl";
+            this.releaseDetailsControl.Release = null;
+            this.releaseDetailsControl.Size = new System.Drawing.Size(512, 336);
+            this.releaseDetailsControl.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -350,7 +353,7 @@
         private BrightIdeasSoftware.OLVColumn resultSumCol;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem1;
-        private ReleaseDetailsControl userControl11;
+        private ReleaseDetailsControl releaseDetailsControl;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ImageList searchResultImageList;

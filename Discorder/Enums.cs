@@ -72,7 +72,12 @@ namespace Discorder
         CD,
         CDr,
         File,
-        Vinyl
+        Vinyl,
+        DVD,
+        VHS,
+        DVDr,
+        Shellac,
+        Acetate
     }
 
     [System.SerializableAttribute()]

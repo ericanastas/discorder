@@ -127,5 +127,30 @@ namespace Discorder
 
         }
 
+        private void searchResultListView_SelectionChanged(object sender, EventArgs e)
+        {
+
+            if (searchResultListView.SelectedItem == null) return;
+
+            SearchResult selectedResult = (SearchResult)searchResultListView.SelectedObject;
+
+            if (selectedResult.type == SearchResultType.release)
+            {
+                string uri = selectedResult.uri;
+
+                char[] delim = new char[1];
+                delim[0] = '/';
+                string[] splitItems = uri.Split(delim);
+                int releaseNum = System.Convert.ToInt32(splitItems[splitItems.Length - 1]);
+                ReleaseDetails rDetails = Discogs.GetRelease(releaseNum);
+
+                releaseDetailsControl.Release = rDetails;
+            }
+            else
+            {
+                releaseDetailsControl.Release = null;
+            }
+        }
+
     }
 }

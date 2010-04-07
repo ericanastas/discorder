@@ -34,18 +34,24 @@
             this.titleLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.notesTextBox = new System.Windows.Forms.TextBox();
             this.imagesListBox = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.releasePicBox = new System.Windows.Forms.PictureBox();
+            this.tracksOLV = new BrightIdeasSoftware.ObjectListView();
+            this.labelLbl = new System.Windows.Forms.Label();
+            this.releaseLbl = new System.Windows.Forms.Label();
+            this.countryLbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.genresLbl = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.stylesLbl = new System.Windows.Forms.Label();
+            this.formatsLbl = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.releasePicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tracksOLV)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -58,15 +64,21 @@
             this.tableLayoutPanel1.Controls.Add(this.titleLbl, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.notesTextBox, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.imagesListBox, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.objectListView1, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.releasePicBox, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tracksOLV, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.labelLbl, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.releaseLbl, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.countryLbl, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.genresLbl, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.stylesLbl, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.formatsLbl, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -86,7 +98,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 438);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(694, 480);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -117,9 +129,9 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 33);
+            this.label3.Location = new System.Drawing.Point(26, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 14;
@@ -128,58 +140,14 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 53);
+            this.label4.Location = new System.Drawing.Point(7, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 15;
             this.label4.Text = "Released:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Country:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Genres:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 113);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Styles:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 133);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Formats:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -203,7 +171,7 @@
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.ReadOnly = true;
             this.notesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.notesTextBox.Size = new System.Drawing.Size(240, 54);
+            this.notesTextBox.Size = new System.Drawing.Size(473, 54);
             this.notesTextBox.TabIndex = 22;
             this.notesTextBox.Text = resources.GetString("notesTextBox.Text");
             // 
@@ -219,46 +187,157 @@
             "IMage 3",
             "Image 5",
             "Image 5"});
-            this.imagesListBox.Location = new System.Drawing.Point(314, 153);
+            this.imagesListBox.Location = new System.Drawing.Point(547, 153);
             this.imagesListBox.Name = "imagesListBox";
             this.imagesListBox.Size = new System.Drawing.Size(144, 43);
             this.imagesListBox.TabIndex = 23;
             // 
-            // pictureBox1
+            // releasePicBox
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Discorder.Properties.Resources.missingReleaseImage;
-            this.pictureBox1.InitialImage = global::Discorder.Properties.Resources.missingReleaseImage;
-            this.pictureBox1.Location = new System.Drawing.Point(314, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 7);
-            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.releasePicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.releasePicBox.Image = global::Discorder.Properties.Resources.missingReleaseImage;
+            this.releasePicBox.InitialImage = global::Discorder.Properties.Resources.missingReleaseImage;
+            this.releasePicBox.Location = new System.Drawing.Point(547, 3);
+            this.releasePicBox.Name = "releasePicBox";
+            this.tableLayoutPanel1.SetRowSpan(this.releasePicBox, 7);
+            this.releasePicBox.Size = new System.Drawing.Size(144, 144);
+            this.releasePicBox.TabIndex = 25;
+            this.releasePicBox.TabStop = false;
             // 
-            // objectListView1
+            // tracksOLV
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.objectListView1, 2);
-            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.objectListView1.Location = new System.Drawing.Point(68, 213);
-            this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(390, 222);
-            this.objectListView1.TabIndex = 26;
-            this.objectListView1.UseCompatibleStateImageBehavior = false;
-            this.objectListView1.View = System.Windows.Forms.View.Details;
+            this.tableLayoutPanel1.SetColumnSpan(this.tracksOLV, 2);
+            this.tracksOLV.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tracksOLV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tracksOLV.Location = new System.Drawing.Point(68, 213);
+            this.tracksOLV.Name = "tracksOLV";
+            this.tracksOLV.Size = new System.Drawing.Size(623, 264);
+            this.tracksOLV.TabIndex = 26;
+            this.tracksOLV.UseCompatibleStateImageBehavior = false;
+            this.tracksOLV.View = System.Windows.Forms.View.Details;
+            // 
+            // labelLbl
+            // 
+            this.labelLbl.AutoEllipsis = true;
+            this.labelLbl.AutoSize = true;
+            this.labelLbl.Location = new System.Drawing.Point(68, 30);
+            this.labelLbl.Name = "labelLbl";
+            this.labelLbl.Size = new System.Drawing.Size(337, 13);
+            this.labelLbl.TabIndex = 27;
+            this.labelLbl.Text = "Blah blah blah blahlbhaBlah blah blah blahlbhaBlah blah blah blahlbha";
+            this.labelLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // releaseLbl
+            // 
+            this.releaseLbl.AutoEllipsis = true;
+            this.releaseLbl.AutoSize = true;
+            this.releaseLbl.Location = new System.Drawing.Point(68, 50);
+            this.releaseLbl.Name = "releaseLbl";
+            this.releaseLbl.Size = new System.Drawing.Size(337, 13);
+            this.releaseLbl.TabIndex = 28;
+            this.releaseLbl.Text = "Blah blah blah blahlbhaBlah blah blah blahlbhaBlah blah blah blahlbha";
+            this.releaseLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // countryLbl
+            // 
+            this.countryLbl.AutoEllipsis = true;
+            this.countryLbl.AutoSize = true;
+            this.countryLbl.Location = new System.Drawing.Point(68, 70);
+            this.countryLbl.Name = "countryLbl";
+            this.countryLbl.Size = new System.Drawing.Size(337, 13);
+            this.countryLbl.TabIndex = 29;
+            this.countryLbl.Text = "Blah blah blah blahlbhaBlah blah blah blahlbhaBlah blah blah blahlbha";
+            this.countryLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Country:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // genresLbl
+            // 
+            this.genresLbl.AutoEllipsis = true;
+            this.genresLbl.AutoSize = true;
+            this.genresLbl.Location = new System.Drawing.Point(68, 90);
+            this.genresLbl.Name = "genresLbl";
+            this.genresLbl.Size = new System.Drawing.Size(337, 13);
+            this.genresLbl.TabIndex = 32;
+            this.genresLbl.Text = "Blah blah blah blahlbhaBlah blah blah blahlbhaBlah blah blah blahlbha";
+            this.genresLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Genres:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // stylesLbl
+            // 
+            this.stylesLbl.AutoEllipsis = true;
+            this.stylesLbl.AutoSize = true;
+            this.stylesLbl.Location = new System.Drawing.Point(68, 110);
+            this.stylesLbl.Name = "stylesLbl";
+            this.stylesLbl.Size = new System.Drawing.Size(337, 13);
+            this.stylesLbl.TabIndex = 30;
+            this.stylesLbl.Text = "Blah blah blah blahlbhaBlah blah blah blahlbhaBlah blah blah blahlbha";
+            this.stylesLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // formatsLbl
+            // 
+            this.formatsLbl.AutoEllipsis = true;
+            this.formatsLbl.AutoSize = true;
+            this.formatsLbl.Location = new System.Drawing.Point(68, 130);
+            this.formatsLbl.Name = "formatsLbl";
+            this.formatsLbl.Size = new System.Drawing.Size(337, 13);
+            this.formatsLbl.TabIndex = 31;
+            this.formatsLbl.Text = "Blah blah blah blahlbhaBlah blah blah blahlbhaBlah blah blah blahlbha";
+            this.formatsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(24, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Styles:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Formats:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ReleaseDetailsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(350, 300);
             this.Name = "ReleaseDetailsControl";
-            this.Size = new System.Drawing.Size(461, 438);
+            this.Size = new System.Drawing.Size(694, 480);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.releasePicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tracksOLV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,7 +356,13 @@
         private System.Windows.Forms.TextBox notesTextBox;
         private System.Windows.Forms.ListBox imagesListBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private BrightIdeasSoftware.ObjectListView objectListView1;
+        private System.Windows.Forms.PictureBox releasePicBox;
+        private BrightIdeasSoftware.ObjectListView tracksOLV;
+        private System.Windows.Forms.Label labelLbl;
+        private System.Windows.Forms.Label releaseLbl;
+        private System.Windows.Forms.Label countryLbl;
+        private System.Windows.Forms.Label genresLbl;
+        private System.Windows.Forms.Label stylesLbl;
+        private System.Windows.Forms.Label formatsLbl;
     }
 }
