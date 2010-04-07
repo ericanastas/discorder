@@ -59,6 +59,12 @@
     <Compile Include="ArtistDetails.cs" />
     <Compile Include="ArtistInfo.cs" />
     <Compile Include="DiscogsSearchVirtualDataSource.cs" />
+    <Compile Include="ReleaseDetailsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReleaseDetailsControl.Designer.cs">
+      <DependentUpon>ReleaseDetailsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReleaseInfo.cs" />
     <Compile Include="LabelDetails.cs" />
     <Compile Include="ReleaseDetails.cs" />
@@ -86,6 +92,10 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReleaseDetailsControl.resx">
+      <DependentUpon>ReleaseDetailsControl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
