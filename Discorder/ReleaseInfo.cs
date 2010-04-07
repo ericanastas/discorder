@@ -117,8 +117,8 @@ namespace Discorder
 
 
         
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public int id
+        [System.Xml.Serialization.XmlAttributeAttribute("id")]
+        public int ID
         {
             get
             {
@@ -133,8 +133,8 @@ namespace Discorder
 
 
         
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public ReleaseStatus status
+        [System.Xml.Serialization.XmlAttributeAttribute("status")]
+        public ReleaseStatus Status
         {
             get
             {
@@ -146,11 +146,9 @@ namespace Discorder
             }
         }
 
-
-
         
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public ReleaseType type
+        [System.Xml.Serialization.XmlAttributeAttribute("type")]
+        public ReleaseType ReleaseType
         {
             get
             {

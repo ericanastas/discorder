@@ -41,8 +41,6 @@ namespace Discorder
             }
             else
             {
-                BrightIdeasSoftware.TreeListView;
-                    BrightIdeasSoftware.IVirtualListDataSource
                 return "";
             }
 
@@ -105,9 +103,34 @@ namespace Discorder
             }
         }
 
-        private List<ReleaseInfo> GetChildren(object o)
+        private ReleaseInfo[] GetChildren(object o)
         {
-            return new List<ReleaseInfo>();
+            SearchResult sResult = (SearchResult)o;
+
+            string uri = sResult.uri;
+            char[] delim = new char[1];
+            delim[0] = '/';
+            string[] splitItems = uri.Split(delim);
+            string endString = splitItems[splitItems.Length - 1];
+
+
+            switch (sResult.type)
+            {
+
+
+                case SearchResultType.artist:
+
+                    ArtistDetails aDetails = Discogs.GetArtist(endString, true);
+                    return aDetails.releases;
+
+                case SearchResultType.label:
+
+                    LabelDetails lDetails = Discogs.GetLabel(endString, true);
+                    return lDetails.releases;
+            }
+
+            return new ReleaseInfo[0];
+
         }
 
 
@@ -137,25 +160,34 @@ namespace Discorder
 
         private object GetSearchResultIcon(object o)
         {
-            SearchResult s = (SearchResult)o;
 
+            ReleaseInfo info = o as ReleaseInfo;
+            SearchResult s = o as SearchResult;
             int value = -1;
 
-            switch (s.type)
+
+
+            if (s != null)
             {
-                case SearchResultType.artist:
-                    value = 2;
-                    break;
-                case SearchResultType.label:
-                    value = 1;
-                    break;
-                case SearchResultType.release:
-                    value = 0;
-                    break;
+                switch (s.type)
+                {
+                    case SearchResultType.artist:
+                        value = 2;
+                        break;
+                    case SearchResultType.label:
+                        value = 1;
+                        break;
+                    case SearchResultType.release:
+                        value = 0;
+                        break;
+                }
+            }
+            else if (info != null)
+            {
+                value = 0;
             }
 
             return value;
-
         }
 
 
@@ -242,18 +274,33 @@ namespace Discorder
 
         private void searchResultListView_SelectionChanged(object sender, EventArgs e)
         {
+            if (searchResultListView.SelectedItem == null)
+            {
+                releaseDetailsControl.Release = null;
+                return;
+            }
 
-            if (searchResultListView.SelectedItem == null) return;
+            SearchResult selectedResult = searchResultListView.SelectedObject as SearchResult;
+            ReleaseInfo releaseInfo = searchResultListView.SelectedObject as ReleaseInfo;
 
-            SearchResult selectedResult = (SearchResult)searchResultListView.SelectedObject;
 
-            if (selectedResult.type == SearchResultType.release)
+            int releaseNum = -1;
+
+            if (selectedResult != null && selectedResult.type == SearchResultType.release)
             {
                 string uri = selectedResult.uri;
                 char[] delim = new char[1];
                 delim[0] = '/';
                 string[] splitItems = uri.Split(delim);
-                int releaseNum = System.Convert.ToInt32(splitItems[splitItems.Length - 1]);
+                releaseNum = System.Convert.ToInt32(splitItems[splitItems.Length - 1]);
+            }
+            else if (releaseInfo != null)
+            {
+                releaseNum = releaseInfo.ID;
+            }
+
+            if (releaseNum != -1)
+            {
                 ReleaseDetails rDetails = Discogs.GetRelease(releaseNum);
                 releaseDetailsControl.Release = rDetails;
             }
@@ -263,53 +310,15 @@ namespace Discorder
             }
         }
 
-        private void searchResultListView_MouseDoubleClick(object sender, MouseEventArgs e)
+
+        private void button3_Click(object sender, EventArgs e)
         {
-            if (searchResultListView.SelectedItem == null) return;
 
-            SearchResult selectedResult = (SearchResult)searchResultListView.SelectedObject;
+            SearchResultList list;
+            SearchResultList exlist;
+            Discogs.Search("test", SearchType.all, 1, out list, out exlist);
 
-
-            string uri = selectedResult.uri;
-            char[] delim = new char[1];
-            delim[0] = '/';
-            string[] splitItems = uri.Split(delim);
-
-
-            switch (selectedResult.type)
-            {
-
-
-                case SearchResultType.artist:
-
-
-
-                    string escapedArtistName = splitItems[splitItems.Length - 1];
-                    ArtistDetails aDetails = Discogs.GetArtist(escapedArtistName, true);
-
-                    foreach (ReleaseInfo rInfo in aDetails.releases)
-                    {
-
-                        string s = rInfo.Title;
-
-                    }
-
-                    break;
-
-                case SearchResultType.label:
-                    string escapedLabelName = splitItems[splitItems.Length - 1];
-                    LabelDetails lDetails = Discogs.GetLabel(escapedLabelName, true);
-
-                    foreach (ReleaseInfo rInfo in lDetails.releases)
-                    {
-                        string s = rInfo.Title;
-                    }
-
-                    break;
-                default:
-                    break;
-            }
-
+            this.searchResultListView.Roots = list.Results;
         }
 
     }
