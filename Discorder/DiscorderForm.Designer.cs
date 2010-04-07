@@ -38,10 +38,10 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.searchResultListView = new BrightIdeasSoftware.VirtualObjectListView();
+            this.searchResultListView = new BrightIdeasSoftware.TreeListView();
+            this.numCol = new BrightIdeasSoftware.OLVColumn();
             this.resultTitleCOl = new BrightIdeasSoftware.OLVColumn();
             this.resultSumCol = new BrightIdeasSoftware.OLVColumn();
-            this.numCol = new BrightIdeasSoftware.OLVColumn();
             this.searchResultImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.releaseDetailsControl = new Discorder.ReleaseDetailsControl();
@@ -183,13 +183,13 @@
             // 
             // searchResultListView
             // 
+            this.searchResultListView.AllColumns.Add(this.numCol);
             this.searchResultListView.AllColumns.Add(this.resultTitleCOl);
             this.searchResultListView.AllColumns.Add(this.resultSumCol);
-            this.searchResultListView.AllColumns.Add(this.numCol);
             this.searchResultListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.numCol,
             this.resultTitleCOl,
-            this.resultSumCol,
-            this.numCol});
+            this.resultSumCol});
             this.tableLayoutPanel2.SetColumnSpan(this.searchResultListView, 3);
             this.searchResultListView.Cursor = System.Windows.Forms.Cursors.Default;
             this.searchResultListView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -198,6 +198,7 @@
             this.searchResultListView.Location = new System.Drawing.Point(3, 33);
             this.searchResultListView.MultiSelect = false;
             this.searchResultListView.Name = "searchResultListView";
+            this.searchResultListView.OwnerDraw = true;
             this.searchResultListView.RowHeight = 24;
             this.searchResultListView.ShowGroups = false;
             this.searchResultListView.Size = new System.Drawing.Size(506, 220);
@@ -209,31 +210,28 @@
             this.searchResultListView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.searchResultListView_MouseDoubleClick);
             this.searchResultListView.SelectionChanged += new System.EventHandler(this.searchResultListView_SelectionChanged);
             // 
+            // numCol
+            // 
+            this.numCol.AspectName = "";
+            this.numCol.HeaderFont = null;
+            this.numCol.MaximumWidth = 60;
+            this.numCol.MinimumWidth = 60;
+            this.numCol.Text = "#";
+            // 
             // resultTitleCOl
             // 
-            this.resultTitleCOl.AspectName = "title";
-            this.resultTitleCOl.DisplayIndex = 1;
+            this.resultTitleCOl.AspectName = "";
             this.resultTitleCOl.HeaderFont = null;
             this.resultTitleCOl.Text = "Title";
             this.resultTitleCOl.Width = 200;
             // 
             // resultSumCol
             // 
-            this.resultSumCol.AspectName = "summary";
+            this.resultSumCol.AspectName = "";
             this.resultSumCol.AutoCompleteEditor = false;
-            this.resultSumCol.DisplayIndex = 2;
             this.resultSumCol.FillsFreeSpace = true;
             this.resultSumCol.HeaderFont = null;
             this.resultSumCol.Text = "Summary";
-            // 
-            // numCol
-            // 
-            this.numCol.AspectName = "num";
-            this.numCol.DisplayIndex = 0;
-            this.numCol.HeaderFont = null;
-            this.numCol.MaximumWidth = 60;
-            this.numCol.MinimumWidth = 60;
-            this.numCol.Text = "#";
             // 
             // searchResultImageList
             // 
@@ -349,7 +347,7 @@
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.ComboBox searchTypeComboBox;
-        private BrightIdeasSoftware.VirtualObjectListView searchResultListView;
+        private BrightIdeasSoftware.TreeListView searchResultListView;
         private BrightIdeasSoftware.OLVColumn resultTitleCOl;
         private BrightIdeasSoftware.OLVColumn resultSumCol;
         private System.Windows.Forms.ToolStripMenuItem collapseToolStripMenuItem;

@@ -17,9 +17,122 @@ namespace Discorder
 
             searchTypeComboBox.SelectedIndex = 0;
 
-
             this.resultTitleCOl.ImageGetter = new BrightIdeasSoftware.ImageGetterDelegate(this.GetSearchResultIcon);
+
+
+            this.numCol.AspectGetter = new BrightIdeasSoftware.AspectGetterDelegate(this.GetNum);
+            this.resultTitleCOl.AspectGetter = new BrightIdeasSoftware.AspectGetterDelegate(this.GetTitle);
+            this.resultSumCol.AspectGetter = new BrightIdeasSoftware.AspectGetterDelegate(this.GetSummary);
+
+            this.searchResultListView.CanExpandGetter = new BrightIdeasSoftware.TreeListView.CanExpandGetterDelegate(this.CanExpand);
+            this.searchResultListView.ChildrenGetter = new BrightIdeasSoftware.TreeListView.ChildrenGetterDelegate(this.GetChildren);
         }
+
+
+        private string GetNum(object o)
+        {
+            SearchResult sResult = o as SearchResult;
+            ReleaseInfo info = o as ReleaseInfo;
+
+
+            if (sResult != null)
+            {
+                return sResult.num.ToString();
+            }
+            else
+            {
+                BrightIdeasSoftware.TreeListView;
+                    BrightIdeasSoftware.IVirtualListDataSource
+                return "";
+            }
+
+        }
+
+        private string GetTitle(object o)
+        {
+            SearchResult sResult = o as SearchResult;
+            ReleaseInfo info = o as ReleaseInfo;
+
+
+            if (sResult != null)
+            {
+                return sResult.title;
+            }
+            else
+            {
+                return info.Title;
+            }
+        }
+
+
+        private string GetSummary(object o)
+        {
+            SearchResult sResult = o as SearchResult;
+            ReleaseInfo info = o as ReleaseInfo;
+
+
+            if (sResult != null)
+            {
+                return sResult.summary;
+            }
+            else
+            {
+                return "need to generate ReleaseInfo summary";
+            }
+
+
+
+        }
+
+        private bool CanExpand(object o)
+        {
+            if (o.GetType() == typeof(SearchResult))
+            {
+                SearchResult r = (SearchResult)o;
+
+                if (r.type == SearchResultType.artist | r.type == SearchResultType.label)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private List<ReleaseInfo> GetChildren(object o)
+        {
+            return new List<ReleaseInfo>();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         private object GetSearchResultIcon(object o)
@@ -165,20 +278,20 @@ namespace Discorder
 
             switch (selectedResult.type)
             {
-                
+
 
                 case SearchResultType.artist:
 
-                    
-                    
+
+
                     string escapedArtistName = splitItems[splitItems.Length - 1];
                     ArtistDetails aDetails = Discogs.GetArtist(escapedArtistName, true);
 
-                    foreach(ReleaseInfo rInfo in aDetails.releases)
+                    foreach (ReleaseInfo rInfo in aDetails.releases)
                     {
 
                         string s = rInfo.Title;
-                                        
+
                     }
 
                     break;
