@@ -49,7 +49,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.releaseDetailsControl = new Discorder.ReleaseDetailsControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +64,6 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchResultListView)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftRightSplitContainer
@@ -303,7 +301,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
@@ -311,16 +308,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Local Files";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 78);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "TEST TREE VIEW";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // fileToolStripMenuItem
             // 
@@ -369,7 +356,6 @@
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchResultListView)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -399,7 +385,6 @@
         private System.Windows.Forms.Button prevPageButton;
         private System.Windows.Forms.Button nextPageButton;
         private System.Windows.Forms.Label pagePosLabel;
-        private System.Windows.Forms.Button button3;
     }
 }
 

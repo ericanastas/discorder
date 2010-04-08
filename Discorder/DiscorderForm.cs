@@ -354,15 +354,7 @@ namespace Discorder
         }
 
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-            SearchResultList list;
-            SearchResultList exlist;
-            Discogs.Search("test", SearchType.all, 1, out list, out exlist);
-
-            this.searchResultListView.Roots = list.Results;
-        }
 
         private void prevPageButton_Click(object sender, EventArgs e)
         {
