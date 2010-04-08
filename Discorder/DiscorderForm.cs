@@ -26,7 +26,50 @@ namespace Discorder
 
             this.searchResultListView.CanExpandGetter = new BrightIdeasSoftware.TreeListView.CanExpandGetterDelegate(this.CanExpand);
             this.searchResultListView.ChildrenGetter = new BrightIdeasSoftware.TreeListView.ChildrenGetterDelegate(this.GetChildren);
+
+            this.CurrentSearch = null;
         }
+
+        private Search _currentSearch;
+        public Search CurrentSearch
+        {
+            get
+            {
+                return this._currentSearch;
+            }
+            set
+            {
+                this._currentSearch = value;
+
+                if (value == null)
+                {
+                    prevPageButton.Enabled = false;
+                    nextPageButton.Enabled = false;
+                    pagePosLabel.Text = "<No Search>";
+                }
+                else
+                {
+                    this.ShowSearchResults(1);
+
+                }
+
+            }
+        }
+
+        private int _currentSearchpage;
+        private void ShowSearchResults(int page)
+        {
+            if (this.CurrentSearch == null) return;
+            if (page > this.CurrentSearch.LastPageNum) throw new ArgumentOutOfRangeException("page");
+
+            this.searchResultListView.ClearObjects();
+            this.searchResultListView.Roots = this.CurrentSearch.GetSearchResults(page);
+            pagePosLabel.Text = "Page " + page + " of " + this.CurrentSearch.LastPageNum;
+            this._currentSearchpage = page;
+
+            UpdateNextPrevButtons();
+        }
+
 
 
         private string GetNum(object o)
@@ -259,14 +302,14 @@ namespace Discorder
 
             if (!String.IsNullOrEmpty(this.searchTextBox.Text))
             {
-                DiscogsSearchVirtualDataSource dSource = new DiscogsSearchVirtualDataSource(type, this.searchTextBox.Text);
-                searchResultListView.DataSource = dSource;
+                this.CurrentSearch = new Search(searchTextBox.Text, type);
             }
             else
             {
-                searchResultListView.DataSource = null;
-
+                System.Windows.Forms.MessageBox.Show("Please enter something to search for", "Discorder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+
 
 
 
@@ -319,6 +362,44 @@ namespace Discorder
             Discogs.Search("test", SearchType.all, 1, out list, out exlist);
 
             this.searchResultListView.Roots = list.Results;
+        }
+
+        private void prevPageButton_Click(object sender, EventArgs e)
+        {
+            this.ShowSearchResults(this._currentSearchpage - 1);
+
+
+        }
+
+        private void UpdateNextPrevButtons()
+        {
+            if (this._currentSearchpage > 1)
+            {
+                this.prevPageButton.Enabled = true;
+            }
+            else
+            {
+                this.prevPageButton.Enabled = false;
+            }
+
+
+            if (this._currentSearchpage < this.CurrentSearch.LastPageNum)
+            {
+                this.nextPageButton.Enabled = true;
+            }
+            else
+            {
+                this.nextPageButton.Enabled = false;
+            }
+
+
+        }
+
+        private void nextPageButton_Click(object sender, EventArgs e)
+        {
+            this.ShowSearchResults(this._currentSearchpage + 1);
+
+
         }
 
     }

@@ -43,9 +43,9 @@
             this.resultTitleCOl = new BrightIdeasSoftware.OLVColumn();
             this.resultSumCol = new BrightIdeasSoftware.OLVColumn();
             this.searchResultImageList = new System.Windows.Forms.ImageList(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.prevPageButton = new System.Windows.Forms.Button();
+            this.nextPageButton = new System.Windows.Forms.Button();
+            this.pagePosLabel = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.releaseDetailsControl = new Discorder.ReleaseDetailsControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -141,9 +141,9 @@
             this.tableLayoutPanel2.Controls.Add(this.searchButton, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.searchTypeComboBox, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.searchResultListView, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.prevPageButton, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.nextPageButton, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.pagePosLabel, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -249,34 +249,36 @@
             this.searchResultImageList.Images.SetKeyName(1, "labelIcon.gif");
             this.searchResultImageList.Images.SetKeyName(2, "artistIcon.png");
             // 
-            // button1
+            // prevPageButton
             // 
-            this.button1.Location = new System.Drawing.Point(3, 253);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "<<";
-            this.button1.UseVisualStyleBackColor = true;
+            this.prevPageButton.Location = new System.Drawing.Point(3, 253);
+            this.prevPageButton.Name = "prevPageButton";
+            this.prevPageButton.Size = new System.Drawing.Size(54, 23);
+            this.prevPageButton.TabIndex = 4;
+            this.prevPageButton.Text = "<<";
+            this.prevPageButton.UseVisualStyleBackColor = true;
+            this.prevPageButton.Click += new System.EventHandler(this.prevPageButton_Click);
             // 
-            // button2
+            // nextPageButton
             // 
-            this.button2.Location = new System.Drawing.Point(455, 253);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = ">>";
-            this.button2.UseVisualStyleBackColor = true;
+            this.nextPageButton.Location = new System.Drawing.Point(455, 253);
+            this.nextPageButton.Name = "nextPageButton";
+            this.nextPageButton.Size = new System.Drawing.Size(54, 23);
+            this.nextPageButton.TabIndex = 5;
+            this.nextPageButton.Text = ">>";
+            this.nextPageButton.UseVisualStyleBackColor = true;
+            this.nextPageButton.Click += new System.EventHandler(this.nextPageButton_Click);
             // 
-            // label1
+            // pagePosLabel
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.label1, 2);
-            this.label1.Location = new System.Drawing.Point(193, 258);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Page 1 of 56 (Items 1-20)";
+            this.pagePosLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pagePosLabel.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.pagePosLabel, 2);
+            this.pagePosLabel.Location = new System.Drawing.Point(222, 258);
+            this.pagePosLabel.Name = "pagePosLabel";
+            this.pagePosLabel.Size = new System.Drawing.Size(68, 13);
+            this.pagePosLabel.TabIndex = 6;
+            this.pagePosLabel.Text = "Page 1 of 56";
             // 
             // groupBox3
             // 
@@ -394,9 +396,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ImageList searchResultImageList;
         private BrightIdeasSoftware.OLVColumn numCol;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button prevPageButton;
+        private System.Windows.Forms.Button nextPageButton;
+        private System.Windows.Forms.Label pagePosLabel;
         private System.Windows.Forms.Button button3;
     }
 }

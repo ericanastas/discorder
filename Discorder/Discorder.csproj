@@ -66,6 +66,7 @@
     <Compile Include="ReleaseDetails.cs" />
     <Compile Include="LabelInfo.cs" />
     <Compile Include="FormatInfo.cs" />
+    <Compile Include="Search.cs" />
     <Compile Include="TrackInfo.cs" />
     <Compile Include="SearchResultList.cs" />
     <Compile Include="Enums.cs" />
