@@ -82,7 +82,7 @@
             this.leftRightSplitContainer.Panel2.Controls.Add(this.groupBox2);
             this.leftRightSplitContainer.Panel2.Padding = new System.Windows.Forms.Padding(6);
             this.leftRightSplitContainer.Size = new System.Drawing.Size(1136, 695);
-            this.leftRightSplitContainer.SplitterDistance = 542;
+            this.leftRightSplitContainer.SplitterDistance = 538;
             this.leftRightSplitContainer.TabIndex = 1;
             // 
             // groupBox1
@@ -92,7 +92,7 @@
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(530, 683);
+            this.groupBox1.Size = new System.Drawing.Size(526, 683);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Discogs";
@@ -112,7 +112,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer3.Size = new System.Drawing.Size(518, 658);
+            this.splitContainer3.Size = new System.Drawing.Size(514, 658);
             this.splitContainer3.SplitterDistance = 299;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -122,7 +122,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(518, 299);
+            this.groupBox4.Size = new System.Drawing.Size(514, 299);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
@@ -149,7 +149,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(512, 280);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(508, 280);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // searchTextBox
@@ -158,13 +158,13 @@
             this.searchTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchTextBox.Location = new System.Drawing.Point(3, 3);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(376, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(372, 20);
             this.searchTextBox.TabIndex = 0;
             // 
             // searchButton
             // 
             this.searchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchButton.Location = new System.Drawing.Point(455, 3);
+            this.searchButton.Location = new System.Drawing.Point(451, 3);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(54, 24);
             this.searchButton.TabIndex = 1;
@@ -183,7 +183,7 @@
             "Label",
             "Release",
             "Catalog Numbers"});
-            this.searchTypeComboBox.Location = new System.Drawing.Point(385, 3);
+            this.searchTypeComboBox.Location = new System.Drawing.Point(381, 3);
             this.searchTypeComboBox.Name = "searchTypeComboBox";
             this.searchTypeComboBox.Size = new System.Drawing.Size(64, 21);
             this.searchTypeComboBox.TabIndex = 2;
@@ -208,7 +208,7 @@
             this.searchResultListView.OwnerDraw = true;
             this.searchResultListView.RowHeight = 24;
             this.searchResultListView.ShowGroups = false;
-            this.searchResultListView.Size = new System.Drawing.Size(506, 214);
+            this.searchResultListView.Size = new System.Drawing.Size(502, 214);
             this.searchResultListView.SmallImageList = this.searchResultImageList;
             this.searchResultListView.TabIndex = 3;
             this.searchResultListView.UseCompatibleStateImageBehavior = false;
@@ -259,7 +259,7 @@
             // 
             // nextPageButton
             // 
-            this.nextPageButton.Location = new System.Drawing.Point(455, 253);
+            this.nextPageButton.Location = new System.Drawing.Point(451, 253);
             this.nextPageButton.Name = "nextPageButton";
             this.nextPageButton.Size = new System.Drawing.Size(54, 23);
             this.nextPageButton.TabIndex = 5;
@@ -272,7 +272,7 @@
             this.pagePosLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pagePosLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.pagePosLabel, 2);
-            this.pagePosLabel.Location = new System.Drawing.Point(222, 258);
+            this.pagePosLabel.Location = new System.Drawing.Point(220, 258);
             this.pagePosLabel.Name = "pagePosLabel";
             this.pagePosLabel.Size = new System.Drawing.Size(68, 13);
             this.pagePosLabel.TabIndex = 6;
@@ -284,7 +284,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(518, 355);
+            this.groupBox3.Size = new System.Drawing.Size(514, 355);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Release Details";
@@ -296,7 +296,7 @@
             this.releaseDetailsControl.MinimumSize = new System.Drawing.Size(350, 300);
             this.releaseDetailsControl.Name = "releaseDetailsControl";
             this.releaseDetailsControl.Release = null;
-            this.releaseDetailsControl.Size = new System.Drawing.Size(512, 336);
+            this.releaseDetailsControl.Size = new System.Drawing.Size(508, 336);
             this.releaseDetailsControl.TabIndex = 0;
             // 
             // groupBox2
@@ -304,7 +304,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(578, 683);
+            this.groupBox2.Size = new System.Drawing.Size(582, 683);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Local Files";
