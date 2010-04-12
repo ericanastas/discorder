@@ -52,6 +52,8 @@
             this.positionCol = new BrightIdeasSoftware.OLVColumn();
             this.trackTitleCol = new BrightIdeasSoftware.OLVColumn();
             this.durationCol = new BrightIdeasSoftware.OLVColumn();
+            this.artistLbl = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.releasePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tracksOLV)).BeginInit();
@@ -63,44 +65,41 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.titleLbl, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.notesTextBox, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.imagesListBox, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.notesTextBox, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.imagesListBox, 2, 8);
             this.tableLayoutPanel1.Controls.Add(this.releasePicBox, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelLbl, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.releaseLbl, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.countryLbl, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.genresLbl, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.stylesLbl, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.formatsLbl, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.tracksOLV, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.releaseLbl, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.countryLbl, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.genresLbl, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.stylesLbl, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.formatsLbl, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.tracksOLV, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelLbl, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.artistLbl, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowCount = 10;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(694, 480);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -123,7 +122,7 @@
             this.titleLbl.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.titleLbl, 2);
             this.titleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLbl.Location = new System.Drawing.Point(3, 8);
+            this.titleLbl.Location = new System.Drawing.Point(3, 5);
             this.titleLbl.Name = "titleLbl";
             this.titleLbl.Size = new System.Drawing.Size(120, 13);
             this.titleLbl.TabIndex = 16;
@@ -134,7 +133,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 30);
+            this.label3.Location = new System.Drawing.Point(26, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 14;
@@ -145,7 +144,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 50);
+            this.label4.Location = new System.Drawing.Point(7, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 15;
@@ -202,7 +201,7 @@
             this.releasePicBox.InitialImage = global::Discorder.Properties.Resources.missingReleaseImage;
             this.releasePicBox.Location = new System.Drawing.Point(547, 3);
             this.releasePicBox.Name = "releasePicBox";
-            this.tableLayoutPanel1.SetRowSpan(this.releasePicBox, 7);
+            this.tableLayoutPanel1.SetRowSpan(this.releasePicBox, 8);
             this.releasePicBox.Size = new System.Drawing.Size(144, 144);
             this.releasePicBox.TabIndex = 25;
             this.releasePicBox.TabStop = false;
@@ -211,7 +210,7 @@
             // 
             this.labelLbl.AutoEllipsis = true;
             this.labelLbl.AutoSize = true;
-            this.labelLbl.Location = new System.Drawing.Point(68, 30);
+            this.labelLbl.Location = new System.Drawing.Point(68, 42);
             this.labelLbl.Name = "labelLbl";
             this.labelLbl.Size = new System.Drawing.Size(337, 13);
             this.labelLbl.TabIndex = 27;
@@ -222,7 +221,7 @@
             // 
             this.releaseLbl.AutoEllipsis = true;
             this.releaseLbl.AutoSize = true;
-            this.releaseLbl.Location = new System.Drawing.Point(68, 50);
+            this.releaseLbl.Location = new System.Drawing.Point(68, 60);
             this.releaseLbl.Name = "releaseLbl";
             this.releaseLbl.Size = new System.Drawing.Size(337, 13);
             this.releaseLbl.TabIndex = 28;
@@ -233,7 +232,7 @@
             // 
             this.countryLbl.AutoEllipsis = true;
             this.countryLbl.AutoSize = true;
-            this.countryLbl.Location = new System.Drawing.Point(68, 70);
+            this.countryLbl.Location = new System.Drawing.Point(68, 78);
             this.countryLbl.Name = "countryLbl";
             this.countryLbl.Size = new System.Drawing.Size(337, 13);
             this.countryLbl.TabIndex = 29;
@@ -244,7 +243,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 70);
+            this.label2.Location = new System.Drawing.Point(16, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 17;
@@ -255,7 +254,7 @@
             // 
             this.genresLbl.AutoEllipsis = true;
             this.genresLbl.AutoSize = true;
-            this.genresLbl.Location = new System.Drawing.Point(68, 90);
+            this.genresLbl.Location = new System.Drawing.Point(68, 96);
             this.genresLbl.Name = "genresLbl";
             this.genresLbl.Size = new System.Drawing.Size(337, 13);
             this.genresLbl.TabIndex = 32;
@@ -266,7 +265,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 90);
+            this.label8.Location = new System.Drawing.Point(18, 96);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 18;
@@ -277,7 +276,7 @@
             // 
             this.stylesLbl.AutoEllipsis = true;
             this.stylesLbl.AutoSize = true;
-            this.stylesLbl.Location = new System.Drawing.Point(68, 110);
+            this.stylesLbl.Location = new System.Drawing.Point(68, 114);
             this.stylesLbl.Name = "stylesLbl";
             this.stylesLbl.Size = new System.Drawing.Size(337, 13);
             this.stylesLbl.TabIndex = 30;
@@ -288,7 +287,7 @@
             // 
             this.formatsLbl.AutoEllipsis = true;
             this.formatsLbl.AutoSize = true;
-            this.formatsLbl.Location = new System.Drawing.Point(68, 130);
+            this.formatsLbl.Location = new System.Drawing.Point(68, 132);
             this.formatsLbl.Name = "formatsLbl";
             this.formatsLbl.Size = new System.Drawing.Size(337, 13);
             this.formatsLbl.TabIndex = 31;
@@ -299,7 +298,7 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 110);
+            this.label7.Location = new System.Drawing.Point(24, 114);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 19;
@@ -310,7 +309,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 130);
+            this.label9.Location = new System.Drawing.Point(15, 132);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 20;
@@ -369,6 +368,25 @@
             this.durationCol.Text = "Time";
             this.durationCol.Width = 80;
             // 
+            // artistLbl
+            // 
+            this.artistLbl.AutoSize = true;
+            this.artistLbl.Location = new System.Drawing.Point(68, 24);
+            this.artistLbl.Name = "artistLbl";
+            this.artistLbl.Size = new System.Drawing.Size(172, 13);
+            this.artistLbl.TabIndex = 34;
+            this.artistLbl.Text = "ARTIST ARTIST, EXTRA ARTIST";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Artist:";
+            // 
             // ReleaseDetailsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,5 +428,7 @@
         private BrightIdeasSoftware.OLVColumn trackTitleCol;
         private BrightIdeasSoftware.OLVColumn positionCol;
         private BrightIdeasSoftware.OLVColumn durationCol;
+        private System.Windows.Forms.Label artistLbl;
+        private System.Windows.Forms.Label label5;
     }
 }

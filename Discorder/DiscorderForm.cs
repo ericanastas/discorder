@@ -394,5 +394,42 @@ namespace Discorder
 
         }
 
+        private void discogsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (leftRightSplitContainer.Panel1Collapsed)
+            {
+                leftRightSplitContainer.Panel1Collapsed = false;
+            }
+            else {
+                leftRightSplitContainer.Panel1Collapsed = true;
+            }
+        }
+
+        private void localFilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (leftRightSplitContainer.Panel2Collapsed)
+            {
+                leftRightSplitContainer.Panel2Collapsed = false;
+            }
+            else
+            {
+                leftRightSplitContainer.Panel2Collapsed = true;
+            }
+        }
+
+        private void testToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            NAudio.Wave.WaveFileReader w = new NAudio.Wave.WaveFileReader(@"C:\Documents and Settings\eric.anastas\My Documents\My Dropbox\Personal\New Music\The Producers - Banger - Cubic Records - Hard You.wav");
+
+        }
+
+        private void testfiletreamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Discorder.RIFF.RiffFile file = new Discorder.RIFF.RiffFile(@"C:\Documents and Settings\eric.anastas\My Documents\My Dropbox\Personal\New Music\The Producers - Banger - Cubic Records - Hard You.wav");
+
+            
+            
+        }
+
     }
 }
