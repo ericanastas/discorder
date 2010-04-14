@@ -425,7 +425,7 @@ namespace Discorder
 
         private void testfiletreamToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Discorder.RIFF.RiffFile file = new Discorder.RIFF.RiffFile(@"C:\Documents and Settings\eric.anastas\My Documents\My Dropbox\Personal\New Music\The Producers - Banger - Cubic Records - Hard You.wav");
+            //Discorder.RIFF.RiffFile file = new Discorder.RIFF.RiffFile(@"C:\Documents and Settings\eric.anastas\My Documents\My Dropbox\Personal\New Music\The Producers - Banger - Cubic Records - Hard You.wav");
 
             
             

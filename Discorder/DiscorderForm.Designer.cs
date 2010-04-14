@@ -91,7 +91,7 @@
             // leftRightSplitContainer
             // 
             this.leftRightSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftRightSplitContainer.Location = new System.Drawing.Point(0, 26);
+            this.leftRightSplitContainer.Location = new System.Drawing.Point(0, 24);
             this.leftRightSplitContainer.Name = "leftRightSplitContainer";
             // 
             // leftRightSplitContainer.Panel1
@@ -102,7 +102,7 @@
             // leftRightSplitContainer.Panel2
             // 
             this.leftRightSplitContainer.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.leftRightSplitContainer.Size = new System.Drawing.Size(1136, 669);
+            this.leftRightSplitContainer.Size = new System.Drawing.Size(1136, 671);
             this.leftRightSplitContainer.SplitterDistance = 577;
             this.leftRightSplitContainer.TabIndex = 1;
             // 
@@ -113,7 +113,7 @@
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(565, 657);
+            this.groupBox1.Size = new System.Drawing.Size(565, 659);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Discogs";
@@ -133,8 +133,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer3.Size = new System.Drawing.Size(553, 632);
-            this.splitContainer3.SplitterDistance = 273;
+            this.splitContainer3.Size = new System.Drawing.Size(553, 634);
+            this.splitContainer3.SplitterDistance = 275;
             this.splitContainer3.TabIndex = 0;
             // 
             // groupBox4
@@ -143,7 +143,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(553, 273);
+            this.groupBox4.Size = new System.Drawing.Size(553, 275);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
@@ -170,7 +170,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(547, 254);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(547, 256);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // searchTextBox
@@ -229,7 +229,7 @@
             this.searchResultListView.OwnerDraw = true;
             this.searchResultListView.RowHeight = 24;
             this.searchResultListView.ShowGroups = false;
-            this.searchResultListView.Size = new System.Drawing.Size(541, 188);
+            this.searchResultListView.Size = new System.Drawing.Size(541, 190);
             this.searchResultListView.SmallImageList = this.searchResultImageList;
             this.searchResultListView.TabIndex = 3;
             this.searchResultListView.UseCompatibleStateImageBehavior = false;
@@ -270,7 +270,7 @@
             // 
             // prevPageButton
             // 
-            this.prevPageButton.Location = new System.Drawing.Point(3, 227);
+            this.prevPageButton.Location = new System.Drawing.Point(3, 229);
             this.prevPageButton.Name = "prevPageButton";
             this.prevPageButton.Size = new System.Drawing.Size(54, 23);
             this.prevPageButton.TabIndex = 4;
@@ -280,7 +280,7 @@
             // 
             // nextPageButton
             // 
-            this.nextPageButton.Location = new System.Drawing.Point(490, 227);
+            this.nextPageButton.Location = new System.Drawing.Point(490, 229);
             this.nextPageButton.Name = "nextPageButton";
             this.nextPageButton.Size = new System.Drawing.Size(54, 23);
             this.nextPageButton.TabIndex = 5;
@@ -293,7 +293,7 @@
             this.pagePosLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pagePosLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.pagePosLabel, 2);
-            this.pagePosLabel.Location = new System.Drawing.Point(239, 232);
+            this.pagePosLabel.Location = new System.Drawing.Point(239, 234);
             this.pagePosLabel.Name = "pagePosLabel";
             this.pagePosLabel.Size = new System.Drawing.Size(68, 13);
             this.pagePosLabel.TabIndex = 6;
@@ -335,7 +335,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 167F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(555, 669);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(555, 671);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox2
@@ -347,7 +347,7 @@
             this.groupBox2.Controls.Add(this.tableLayoutPanel3);
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(543, 490);
+            this.groupBox2.Size = new System.Drawing.Size(543, 492);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "File List";
@@ -366,7 +366,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(537, 471);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(537, 473);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // button1
@@ -406,7 +406,7 @@
             this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.Location = new System.Drawing.Point(3, 32);
             this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(531, 436);
+            this.objectListView1.Size = new System.Drawing.Size(531, 438);
             this.objectListView1.TabIndex = 2;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
@@ -440,7 +440,7 @@
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Location = new System.Drawing.Point(6, 502);
+            this.groupBox5.Location = new System.Drawing.Point(6, 504);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(294, 161);
             this.groupBox5.TabIndex = 1;
@@ -452,7 +452,7 @@
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox6.Location = new System.Drawing.Point(306, 502);
+            this.groupBox6.Location = new System.Drawing.Point(306, 504);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(243, 161);
             this.groupBox6.TabIndex = 2;
@@ -496,41 +496,41 @@
             this.testfiletreamToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1136, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(1136, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // discogsToolStripMenuItem
             // 
             this.discogsToolStripMenuItem.Name = "discogsToolStripMenuItem";
-            this.discogsToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
+            this.discogsToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.discogsToolStripMenuItem.Text = "Discogs";
             this.discogsToolStripMenuItem.Click += new System.EventHandler(this.discogsToolStripMenuItem_Click);
             // 
             // localFilesToolStripMenuItem
             // 
             this.localFilesToolStripMenuItem.Name = "localFilesToolStripMenuItem";
-            this.localFilesToolStripMenuItem.Size = new System.Drawing.Size(84, 22);
+            this.localFilesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.localFilesToolStripMenuItem.Text = "Local Files";
             this.localFilesToolStripMenuItem.Click += new System.EventHandler(this.localFilesToolStripMenuItem_Click);
             // 
             // testToolStripMenuItem1
             // 
             this.testToolStripMenuItem1.Name = "testToolStripMenuItem1";
-            this.testToolStripMenuItem1.Size = new System.Drawing.Size(45, 22);
+            this.testToolStripMenuItem1.Size = new System.Drawing.Size(38, 20);
             this.testToolStripMenuItem1.Text = "test";
             this.testToolStripMenuItem1.Click += new System.EventHandler(this.testToolStripMenuItem1_Click);
             // 
             // testfiletreamToolStripMenuItem
             // 
             this.testfiletreamToolStripMenuItem.Name = "testfiletreamToolStripMenuItem";
-            this.testfiletreamToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.testfiletreamToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.testfiletreamToolStripMenuItem.Text = "testfiletream";
             this.testfiletreamToolStripMenuItem.Click += new System.EventHandler(this.testfiletreamToolStripMenuItem_Click);
             // 
