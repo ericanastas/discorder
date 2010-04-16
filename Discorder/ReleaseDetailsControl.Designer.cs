@@ -32,13 +32,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.titleLbl = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.notesTextBox = new System.Windows.Forms.TextBox();
             this.imagesListBox = new System.Windows.Forms.ListBox();
             this.releasePicBox = new System.Windows.Forms.PictureBox();
-            this.labelLbl = new System.Windows.Forms.Label();
             this.releaseLbl = new System.Windows.Forms.Label();
             this.countryLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +50,8 @@
             this.positionCol = new BrightIdeasSoftware.OLVColumn();
             this.trackTitleCol = new BrightIdeasSoftware.OLVColumn();
             this.durationCol = new BrightIdeasSoftware.OLVColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelLbl = new System.Windows.Forms.Label();
             this.artistLbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -129,17 +129,6 @@
             this.titleLbl.Text = "THIS IS THE TITLE";
             this.titleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Label:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -205,17 +194,6 @@
             this.releasePicBox.Size = new System.Drawing.Size(144, 144);
             this.releasePicBox.TabIndex = 25;
             this.releasePicBox.TabStop = false;
-            // 
-            // labelLbl
-            // 
-            this.labelLbl.AutoEllipsis = true;
-            this.labelLbl.AutoSize = true;
-            this.labelLbl.Location = new System.Drawing.Point(68, 42);
-            this.labelLbl.Name = "labelLbl";
-            this.labelLbl.Size = new System.Drawing.Size(337, 13);
-            this.labelLbl.TabIndex = 27;
-            this.labelLbl.Text = "Blah blah blah blahlbhaBlah blah blah blahlbhaBlah blah blah blahlbha";
-            this.labelLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // releaseLbl
             // 
@@ -345,6 +323,7 @@
             this.tracksOLV.TabIndex = 33;
             this.tracksOLV.UseCompatibleStateImageBehavior = false;
             this.tracksOLV.View = System.Windows.Forms.View.Details;
+            this.tracksOLV.SelectionChanged += new System.EventHandler(this.tracksOLV_SelectionChanged);
             // 
             // positionCol
             // 
@@ -367,6 +346,28 @@
             this.durationCol.HeaderFont = null;
             this.durationCol.Text = "Time";
             this.durationCol.Width = 80;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Label:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelLbl
+            // 
+            this.labelLbl.AutoEllipsis = true;
+            this.labelLbl.AutoSize = true;
+            this.labelLbl.Location = new System.Drawing.Point(68, 42);
+            this.labelLbl.Name = "labelLbl";
+            this.labelLbl.Size = new System.Drawing.Size(337, 13);
+            this.labelLbl.TabIndex = 27;
+            this.labelLbl.Text = "Blah blah blah blahlbhaBlah blah blah blahlbhaBlah blah blah blahlbha";
+            this.labelLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // artistLbl
             // 

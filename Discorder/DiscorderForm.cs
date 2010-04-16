@@ -30,6 +30,71 @@ namespace Discorder
             this.CurrentSearch = null;
         }
 
+
+
+
+        private string _filePath;
+        public string FilePath
+        {
+            get
+            {
+                return this._filePath;
+            }
+            set
+            {
+                if (this._filePath != value)
+                {
+                    fileListOLV.ClearObjects();
+                    this.filePathLabel.Text = value;
+                    this._filePath = value;
+
+                    if (System.IO.Directory.Exists(value))
+                    {
+
+                        System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(value);
+                        System.IO.FileInfo[] files = di.GetFiles();
+                        fileListOLV.SetObjects(files);
+                    }
+                }
+            }
+        }
+
+
+
+        private ReleaseDetails _selectedRelease;
+        public ReleaseDetails SelectedRelease
+        {
+            get
+            {
+                return this._selectedRelease;
+            }
+            set
+            {
+                if (this._selectedRelease != value)
+                {
+                    this._selectedRelease = value;
+                }
+            }
+        }
+
+        private TrackInfo _selectedTrack;
+        public TrackInfo SelectedTrack
+        {
+            get
+            {
+                return this._selectedTrack;
+            }
+            set
+            {
+                if (this._selectedTrack != value)
+                {
+                    this._selectedTrack = value;
+                }
+            }
+        }
+
+
+
         private Search _currentSearch;
         public Search CurrentSearch
         {
@@ -50,9 +115,7 @@ namespace Discorder
                 else
                 {
                     this.ShowSearchResults(1);
-
                 }
-
             }
         }
 
@@ -66,7 +129,6 @@ namespace Discorder
             this.searchResultListView.Roots = this.CurrentSearch.GetSearchResults(page);
             pagePosLabel.Text = "Page " + page + " of " + this.CurrentSearch.LastPageNum;
             this._currentSearchpage = page;
-
             UpdateNextPrevButtons();
         }
 
@@ -327,6 +389,8 @@ namespace Discorder
             ReleaseInfo releaseInfo = searchResultListView.SelectedObject as ReleaseInfo;
 
 
+
+
             int releaseNum = -1;
 
             if (selectedResult != null && selectedResult.type == SearchResultType.release)
@@ -400,7 +464,8 @@ namespace Discorder
             {
                 leftRightSplitContainer.Panel1Collapsed = false;
             }
-            else {
+            else
+            {
                 leftRightSplitContainer.Panel1Collapsed = true;
             }
         }
@@ -427,8 +492,20 @@ namespace Discorder
         {
             //Discorder.RIFF.RiffFile file = new Discorder.RIFF.RiffFile(@"C:\Documents and Settings\eric.anastas\My Documents\My Dropbox\Personal\New Music\The Producers - Banger - Cubic Records - Hard You.wav");
 
+
+
+        }
+
+        private void browseButton_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fb = new FolderBrowserDialog();
+
+            if (fb.ShowDialog() == DialogResult.OK)
+            {
+                this.FilePath = fb.SelectedPath;
             
             
+            }
         }
 
     }

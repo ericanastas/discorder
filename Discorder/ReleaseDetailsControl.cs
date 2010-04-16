@@ -27,8 +27,7 @@ namespace Discorder
             set
             {
                 this._release = value;
-
-
+                this.Track = null;
 
                 if (value == null)
                 {
@@ -68,11 +67,6 @@ namespace Discorder
 
                     return;
                 }
-
-
-
-
-
 
 
                 //Title
@@ -178,13 +172,72 @@ namespace Discorder
                 tracksOLV.SetObjects(value.TrackList);
                 tracksOLV.Sort(positionCol, SortOrder.Ascending);
 
-
+                OnReleaseChanged(new ReleaseChangedEventArgs(value));
+                
 
             }
 
         }
 
 
+        private TrackInfo _track;
+        public TrackInfo Track
+        {
+            get
+            {
+                return this._track;
+            }
+            set
+            {
+                if (this._track != value)
+                {
+                    this._track = value;
+                    OnTrackChanged(new TrackChangedEventArgs(value));
+                }
+                    
+            }
+        }
+
+        private void tracksOLV_SelectionChanged(object sender, EventArgs e)
+        {
+            this.Track = (TrackInfo)tracksOLV.SelectedObject;
+        }
+
+        public class TrackChangedEventArgs : System.EventArgs
+        {
+            public TrackChangedEventArgs(TrackInfo SelectedTrack)
+            {
+                this.SelectedTrack = SelectedTrack;
+            }
+            public TrackInfo SelectedTrack { get; private set; }
+        }
+        public event EventHandler<TrackChangedEventArgs> TrackChanged;
+        protected virtual void OnTrackChanged(TrackChangedEventArgs e)
+        {
+            var handler = TrackChanged;
+            if (handler != null)
+                handler(this, e);
+        }
+
+
+
+
+
+        public class ReleaseChangedEventArgs : System.EventArgs
+        {
+            public ReleaseChangedEventArgs(ReleaseDetails SelectedRelease)
+            {
+                this.SelectedRelease = SelectedRelease;
+            }
+            public ReleaseDetails SelectedRelease { get; private set; }
+        }
+        public event EventHandler<ReleaseChangedEventArgs> ReleaseChanged;
+        protected virtual void OnReleaseChanged(ReleaseChangedEventArgs e)
+        {
+            var handler = ReleaseChanged;
+            if (handler != null)
+                handler(this, e);
+        }
 
     }
 }
