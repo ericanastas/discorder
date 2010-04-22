@@ -6,11 +6,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using NAudio.Wave;
 
 namespace Discorder
 {
     public partial class DiscorderForm : Form
     {
+
+        private IWaveIn captureDevice;
+
+
+
         public DiscorderForm()
         {
             InitializeComponent();
@@ -28,6 +34,12 @@ namespace Discorder
             this.searchResultListView.ChildrenGetter = new BrightIdeasSoftware.TreeListView.ChildrenGetterDelegate(this.GetChildren);
 
             this.CurrentSearch = null;
+
+
+            captureDevice = new WaveIn();
+            captureDevice.
+
+
         }
 
 

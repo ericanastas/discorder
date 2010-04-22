@@ -83,7 +83,7 @@ namespace Discorder
         private static Discorder.Response GetResponse(string uri)
         {
             WebClient wc = new WebClient();
-            wc.Headers.Add(HttpRequestHeader.AcceptEncoding, "gzip");
+            //wc.Headers.Add(HttpRequestHeader.AcceptEncoding, "gzip");
             wc.Proxy = null;
 
             using (GZipStream stream = new GZipStream(
