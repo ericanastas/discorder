@@ -13,7 +13,7 @@ namespace Discorder
     public partial class DiscorderForm : Form
     {
 
-        private IWaveIn captureDevice;
+        private WaveIn captureDevice;
 
 
 
@@ -37,7 +37,30 @@ namespace Discorder
 
 
             captureDevice = new WaveIn();
-            captureDevice.
+
+            int count = WaveIn.DeviceCount;
+            List<string> products = new List<string>();
+            List<int> channels = new List<int>();
+
+            for(int i=0;i<count;i++)
+            {
+            
+                products.Add(WaveIn.GetCapabilities(i).ProductName);
+                channels.Add(WaveIn.GetCapabilities(i).Channels);
+
+
+ 
+            }
+
+            
+
+
+            
+
+            
+
+            
+            
 
 
         }
