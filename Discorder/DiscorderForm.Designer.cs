@@ -61,9 +61,10 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.manualFileNameRB = new System.Windows.Forms.RadioButton();
-            this.automaticFileNameRB = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.autoMatchFileNamecheckBox = new System.Windows.Forms.CheckBox();
+            this.volumeMeter2 = new NAudio.Gui.VolumeMeter();
+            this.volumeMeter1 = new NAudio.Gui.VolumeMeter();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,7 +111,7 @@
             // leftRightSplitContainer.Panel2
             // 
             this.leftRightSplitContainer.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.leftRightSplitContainer.Size = new System.Drawing.Size(1136, 671);
+            this.leftRightSplitContainer.Size = new System.Drawing.Size(1176, 638);
             this.leftRightSplitContainer.SplitterDistance = 577;
             this.leftRightSplitContainer.TabIndex = 1;
             // 
@@ -121,7 +122,7 @@
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(565, 659);
+            this.groupBox1.Size = new System.Drawing.Size(565, 626);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Discogs";
@@ -141,8 +142,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer3.Size = new System.Drawing.Size(553, 634);
-            this.splitContainer3.SplitterDistance = 275;
+            this.splitContainer3.Size = new System.Drawing.Size(553, 601);
+            this.splitContainer3.SplitterDistance = 242;
             this.splitContainer3.TabIndex = 0;
             // 
             // groupBox4
@@ -151,7 +152,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(553, 275);
+            this.groupBox4.Size = new System.Drawing.Size(553, 242);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
@@ -178,7 +179,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(547, 256);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(547, 223);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // searchTextBox
@@ -237,7 +238,7 @@
             this.searchResultListView.OwnerDraw = true;
             this.searchResultListView.RowHeight = 24;
             this.searchResultListView.ShowGroups = false;
-            this.searchResultListView.Size = new System.Drawing.Size(541, 190);
+            this.searchResultListView.Size = new System.Drawing.Size(541, 157);
             this.searchResultListView.SmallImageList = this.searchResultImageList;
             this.searchResultListView.TabIndex = 3;
             this.searchResultListView.UseCompatibleStateImageBehavior = false;
@@ -278,7 +279,7 @@
             // 
             // prevPageButton
             // 
-            this.prevPageButton.Location = new System.Drawing.Point(3, 229);
+            this.prevPageButton.Location = new System.Drawing.Point(3, 196);
             this.prevPageButton.Name = "prevPageButton";
             this.prevPageButton.Size = new System.Drawing.Size(54, 23);
             this.prevPageButton.TabIndex = 4;
@@ -288,7 +289,7 @@
             // 
             // nextPageButton
             // 
-            this.nextPageButton.Location = new System.Drawing.Point(490, 229);
+            this.nextPageButton.Location = new System.Drawing.Point(490, 196);
             this.nextPageButton.Name = "nextPageButton";
             this.nextPageButton.Size = new System.Drawing.Size(54, 23);
             this.nextPageButton.TabIndex = 5;
@@ -301,7 +302,7 @@
             this.pagePosLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pagePosLabel.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.pagePosLabel, 2);
-            this.pagePosLabel.Location = new System.Drawing.Point(239, 234);
+            this.pagePosLabel.Location = new System.Drawing.Point(239, 201);
             this.pagePosLabel.Name = "pagePosLabel";
             this.pagePosLabel.Size = new System.Drawing.Size(68, 13);
             this.pagePosLabel.TabIndex = 6;
@@ -344,7 +345,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 167F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(555, 671);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(595, 638);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox2
@@ -356,7 +357,7 @@
             this.groupBox2.Controls.Add(this.tableLayoutPanel3);
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(543, 492);
+            this.groupBox2.Size = new System.Drawing.Size(583, 459);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "File List";
@@ -375,18 +376,17 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(537, 473);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(577, 440);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // browseButton
             // 
-            this.browseButton.Location = new System.Drawing.Point(461, 3);
+            this.browseButton.Location = new System.Drawing.Point(501, 3);
             this.browseButton.Name = "browseButton";
             this.browseButton.Size = new System.Drawing.Size(73, 23);
             this.browseButton.TabIndex = 0;
             this.browseButton.Text = "Browse";
             this.browseButton.UseVisualStyleBackColor = true;
-            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
             // 
             // filePathLabel
             // 
@@ -417,7 +417,7 @@
             this.fileListOLV.Location = new System.Drawing.Point(3, 32);
             this.fileListOLV.Name = "fileListOLV";
             this.fileListOLV.ShowGroups = false;
-            this.fileListOLV.Size = new System.Drawing.Size(531, 438);
+            this.fileListOLV.Size = new System.Drawing.Size(571, 405);
             this.fileListOLV.TabIndex = 2;
             this.fileListOLV.UseCompatibleStateImageBehavior = false;
             this.fileListOLV.View = System.Windows.Forms.View.Details;
@@ -453,7 +453,7 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.tableLayoutPanel4);
-            this.groupBox5.Location = new System.Drawing.Point(6, 504);
+            this.groupBox5.Location = new System.Drawing.Point(6, 471);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(294, 161);
             this.groupBox5.TabIndex = 1;
@@ -462,75 +462,91 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnCount = 4;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.textBox1, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.manualFileNameRB, 2, 2);
-            this.tableLayoutPanel4.Controls.Add(this.automaticFileNameRB, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel4.Controls.Add(this.textBox1, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.autoMatchFileNamecheckBox, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.volumeMeter2, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.volumeMeter1, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.3913F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.6087F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel4.RowCount = 4;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(288, 142);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel4.SetColumnSpan(this.textBox1, 2);
-            this.textBox1.Location = new System.Drawing.Point(68, 92);
+            this.tableLayoutPanel4.SetColumnSpan(this.textBox1, 3);
+            this.textBox1.Location = new System.Drawing.Point(68, 86);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(217, 20);
             this.textBox1.TabIndex = 2;
-            // 
-            // manualFileNameRB
-            // 
-            this.manualFileNameRB.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.manualFileNameRB.AutoSize = true;
-            this.manualFileNameRB.Location = new System.Drawing.Point(163, 120);
-            this.manualFileNameRB.Name = "manualFileNameRB";
-            this.manualFileNameRB.Size = new System.Drawing.Size(60, 17);
-            this.manualFileNameRB.TabIndex = 0;
-            this.manualFileNameRB.Text = "Manual";
-            this.manualFileNameRB.UseVisualStyleBackColor = true;
-            // 
-            // automaticFileNameRB
-            // 
-            this.automaticFileNameRB.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.automaticFileNameRB.AutoSize = true;
-            this.automaticFileNameRB.Checked = true;
-            this.automaticFileNameRB.Location = new System.Drawing.Point(68, 120);
-            this.automaticFileNameRB.Name = "automaticFileNameRB";
-            this.automaticFileNameRB.Size = new System.Drawing.Size(72, 17);
-            this.automaticFileNameRB.TabIndex = 1;
-            this.automaticFileNameRB.TabStop = true;
-            this.automaticFileNameRB.Text = "Automatic";
-            this.automaticFileNameRB.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 95);
+            this.label2.Location = new System.Drawing.Point(5, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "File Name:";
+            // 
+            // autoMatchFileNamecheckBox
+            // 
+            this.autoMatchFileNamecheckBox.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.autoMatchFileNamecheckBox, 3);
+            this.autoMatchFileNamecheckBox.Location = new System.Drawing.Point(68, 114);
+            this.autoMatchFileNamecheckBox.Name = "autoMatchFileNamecheckBox";
+            this.autoMatchFileNamecheckBox.Size = new System.Drawing.Size(131, 17);
+            this.autoMatchFileNamecheckBox.TabIndex = 4;
+            this.autoMatchFileNamecheckBox.Text = "Automatic File Naming";
+            this.autoMatchFileNamecheckBox.UseVisualStyleBackColor = true;
+            // 
+            // volumeMeter2
+            // 
+            this.volumeMeter2.Amplitude = 1F;
+            this.volumeMeter2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.volumeMeter2.Location = new System.Drawing.Point(261, 3);
+            this.volumeMeter2.MaxDb = 18F;
+            this.volumeMeter2.MinDb = -60F;
+            this.volumeMeter2.Name = "volumeMeter2";
+            this.tableLayoutPanel4.SetRowSpan(this.volumeMeter2, 2);
+            this.volumeMeter2.Size = new System.Drawing.Size(24, 75);
+            this.volumeMeter2.TabIndex = 7;
+            this.volumeMeter2.Text = "recVolMeterL";
+            // 
+            // volumeMeter1
+            // 
+            this.volumeMeter1.Amplitude = 1F;
+            this.volumeMeter1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.volumeMeter1.Location = new System.Drawing.Point(231, 3);
+            this.volumeMeter1.MaxDb = 18F;
+            this.volumeMeter1.MinDb = -60F;
+            this.volumeMeter1.Name = "volumeMeter1";
+            this.tableLayoutPanel4.SetRowSpan(this.volumeMeter1, 2);
+            this.volumeMeter1.Size = new System.Drawing.Size(24, 75);
+            this.volumeMeter1.TabIndex = 6;
+            this.volumeMeter1.Text = "recVolMeterL";
             // 
             // groupBox6
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox6.Location = new System.Drawing.Point(306, 504);
+            this.groupBox6.Location = new System.Drawing.Point(306, 471);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(243, 161);
+            this.groupBox6.Size = new System.Drawing.Size(283, 161);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Playback / Editing";
@@ -572,7 +588,7 @@
             this.testfiletreamToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1136, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1176, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -614,10 +630,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 695);
+            this.ClientSize = new System.Drawing.Size(1176, 662);
             this.Controls.Add(this.leftRightSplitContainer);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(1024, 600);
             this.Name = "DiscorderForm";
             this.Text = "Discorder";
             this.leftRightSplitContainer.Panel1.ResumeLayout(false);
@@ -690,10 +707,11 @@
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem testfiletreamToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.RadioButton automaticFileNameRB;
-        private System.Windows.Forms.RadioButton manualFileNameRB;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox autoMatchFileNamecheckBox;
+        private NAudio.Gui.VolumeMeter volumeMeter2;
+        private NAudio.Gui.VolumeMeter volumeMeter1;
     }
 }
 

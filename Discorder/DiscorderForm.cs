@@ -531,17 +531,8 @@ namespace Discorder
 
         }
 
-        private void browseButton_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog fb = new FolderBrowserDialog();
 
-            if (fb.ShowDialog() == DialogResult.OK)
-            {
-                this.FilePath = fb.SelectedPath;
-            
-            
-            }
-        }
+
 
     }
 }
